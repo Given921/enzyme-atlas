@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="在 Enzyme Atlas 已收录的真实 DOI 文献中精确搜索。">
+  <title>搜索文献 | Enzyme Atlas</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">EA</span><span>Enzyme Atlas</span></a>
+    <form class="site-search" action="search.html" role="search"><span class="search-icon" aria-hidden="true">⌕</span><input id="headerQuery" name="q" type="search" placeholder="搜索酶、EC 号、反应、底物、DOI 或作者" aria-label="全站文献搜索"><button>搜索</button></form>
+    <nav class="main-nav" aria-label="主导航"><a href="index.html#latest">本周精选</a><a href="index.html#all-papers">全部收录</a><a href="classics.html">经典论文</a><a href="topics.html">研究专题</a><a href="index.html#method">筛选标准</a></nav>
+  </header>
+
+  <main class="subpage-main search-page">
+    <header class="subpage-hero"><div><p class="eyebrow">KNOWN-ITEM LOOKUP</p><h1 id="searchTitle">搜索文献</h1><p>当你已有明确对象时，在本平台的收录池中查找。搜索负责“找得到”，首页推荐负责“不会错过”。</p></div></header>
+    <section class="subpage-content"><div class="search-workspace">
+      <p class="purpose-note">支持论文标题、作者、期刊、酶学主题、DOI 与方法关键词。搜索结果不会改变首页的公共推荐排序。</p>
+      <form class="site-search" id="searchForm" role="search"><span class="search-icon" aria-hidden="true">⌕</span><input id="query" type="search" placeholder="例如：cascade、10.1038/…、定向进化" aria-label="输入文献搜索词"><button>搜索</button></form>
+      <p class="search-note" id="searchNote"></p>
+      <section id="searchResults" aria-live="polite"></section>
+    </div></section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">EA</span><span>Enzyme Atlas</span></a><p>面向所有酶研究者的每周文献推荐平台。</p></div><div><strong>发现</strong><a href="index.html#latest">本周精选</a><a href="index.html#all-papers">全部收录</a></div><div><strong>阅读</strong><a href="classics.html">经典论文</a><a href="topics.html">研究专题</a></div><div><strong>关于</strong><a href="index.html#method">筛选标准</a><span>每周一更新</span></div></footer>
+  <script src="search.js"></script>
+</body>
+</html>

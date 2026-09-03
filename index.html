@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="面向所有酶研究者的每周文献推荐、完整收录与经典阅读路径。" />
+  <title>Enzyme Atlas | 酶学文献推荐</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Enzyme Atlas 首页"><span class="brand-mark" aria-hidden="true">EA</span><span>Enzyme Atlas</span></a>
+    <form class="site-search" id="globalSearch" action="search.html" role="search"><span class="search-icon" aria-hidden="true">⌕</span><input id="globalSearchInput" name="q" type="search" placeholder="搜索酶、EC 号、反应、底物、DOI 或作者" aria-label="全站文献搜索"><button type="submit">搜索</button></form>
+    <nav class="main-nav" aria-label="主导航"><a href="#latest" class="active">本周精选</a><a href="#all-papers">全部收录</a><a href="classics.html">经典论文</a><a href="topics.html">研究专题</a><a href="#method">筛选标准</a></nav>
+    <div class="header-actions"><button class="icon-button" id="openSaved" title="打开阅读清单" aria-label="打开阅读清单">⌑<span id="savedBadge">0</span></button><button class="subscribe-button" id="subscribeBtn">订阅周报 <span>→</span></button></div>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy"><p class="eyebrow">WEEKLY ENZYME LITERATURE</p><h1 id="heroTitle">让重要的酶学研究，不再被错过。</h1><p class="hero-description">每周一更新。编辑筛选新论文，也持续整理改变领域的经典工作。</p></div>
+      <a href="#latest" class="primary-button hero-button">浏览本周精选 <span>↓</span></a>
+    </section>
+
+    <section class="edition-bar" aria-label="本期更新信息"><div><span class="edition-kicker">CURRENT EDITION</span><strong id="editionDate">正在载入本期信息</strong></div><p id="editionSummary">正在核对收录与精选数量…</p><a href="#all-papers">查看完整收录 →</a></section>
+
+    <section class="intent-strip" aria-label="三种文献发现方式">
+      <a href="#latest"><span>01</span><div><strong>不知道该看什么</strong><small>从编辑精选开始</small></div><b>→</b></a>
+      <a href="topics.html"><span>02</span><div><strong>想系统理解一个方向</strong><small>进入专题阅读路径</small></div><b>→</b></a>
+      <a href="search.html"><span>03</span><div><strong>已有明确问题</strong><small>搜索酶、反应或 DOI</small></div><b>→</b></a>
+    </section>
+
+    <section id="latest" class="section featured-section">
+      <div class="section-heading"><div><p class="eyebrow">CURATED THIS WEEK</p><h2 id="featuredTitle">本周最值得读的论文</h2></div><p>不是关键词命中列表。每一篇都说明结论、推荐理由、证据与适合读者。</p><a href="#all-papers" class="arrow-link">查看全部收录 →</a></div>
+      <div class="feature-grid" id="featuredGrid"></div>
+    </section>
+
+    <section id="all-papers" class="section paper-section">
+      <div class="section-heading paper-heading"><div><p class="eyebrow">COMPLETE INTAKE</p><h2>本期全部收录</h2></div><p>精选以外的文献不会消失；完整收录池公开展示，数量与首页统计始终一致。</p><a href="search.html" class="arrow-link">进入精确搜索 →</a></div>
+      <p class="result-count" id="resultCount"></p><div class="paper-list" id="paperList"></div>
+    </section>
+
+    <section class="section observation-section"><div class="section-heading"><div><p class="eyebrow">EDITORIAL NOTES</p><h2>本周领域观察</h2></div><p>把本期论文放回研究脉络中，给出少量可核查的观察，而不是个人相关性排序。</p></div><div class="observation-grid" id="observationGrid"></div></section>
+
+    <section id="classics" class="section classics-section">
+      <div class="classics-intro"><p class="eyebrow">FOUNDATIONAL READING</p><h2>经典论文，也是一条进入领域的路线。</h2><p>按研究问题与方法组织奠基工作，覆盖多酶级联、空间组装、融合酶、定向进化等方向。</p><a class="primary-button dark" href="classics.html">进入经典论文库 <span>→</span></a></div>
+      <div class="reading-path"><p>推荐阅读路径</p><ol><li><span>01</span><b>多酶级联催化</b><small>从反应耦合到体系设计</small></li><li><span>02</span><b>空间组装与底物通道化</b><small>从共定位到人工细胞器</small></li><li><span>03</span><b>融合酶设计</b><small>连接肽、结构域与协同机制</small></li><li><span>04</span><b>酶的定向进化</b><small>从突变库到数据驱动设计</small></li></ol><a class="topic-page-link" href="topics.html">浏览全部研究专题 →</a></div>
+    </section>
+
+    <section id="method" class="section method-section">
+      <div class="method-intro"><p class="eyebrow">EDITORIAL PRINCIPLES</p><h2>推荐值得被解释。</h2><p>平台面向所有酶研究者，不依据个人研究方向改变公共排序。</p><dl class="method-facts"><div><dt>更新频率</dt><dd>每周一</dd></div><div><dt>本期来源</dt><dd>真实 DOI</dd></div><div><dt>推荐方式</dt><dd>编辑筛选</dd></div></dl></div>
+      <div class="principles"><article><span>01</span><h3>公共领域价值</h3><p>不做个人相关性推荐，按研究价值与证据质量评估。</p></article><article><span>02</span><h3>证据优先</h3><p>区分原文结论、平台摘要与编辑评价，避免过度推断。</p></article><article><span>03</span><h3>新旧并重</h3><p>追踪新工作，也保存真正改变领域的经典研究。</p></article><article><span>04</span><h3>可追溯</h3><p>公开本期总数、更新日期、DOI 与推荐理由。</p></article></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand"><a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">EA</span><span>Enzyme Atlas</span></a><p>面向所有酶研究者的每周文献推荐平台。</p></div>
+    <div><strong>发现</strong><a href="#latest">本周精选</a><a href="#all-papers">全部收录</a><a href="search.html">文献搜索</a></div>
+    <div><strong>阅读</strong><a href="classics.html">经典论文</a><a href="topics.html">研究专题</a><a href="search.html?q=酶的级联组装">级联组装与融合</a></div>
+    <div><strong>关于</strong><a href="#method">筛选标准</a><span>每周一更新</span><span>内部试运行版</span></div>
+  </footer>
+
+  <dialog id="paperDialog"><button class="dialog-close" onclick="paperDialog.close()" aria-label="关闭">×</button><div id="dialogContent"></div></dialog>
+  <dialog id="subscribeDialog"><button class="dialog-close" onclick="subscribeDialog.close()" aria-label="关闭">×</button><div class="modal-copy"><p class="eyebrow">WEEKLY BRIEFING</p><h2>订阅酶学文献周报</h2><p>每周一封。订阅专题仅影响你收到的周报，不改变网站的公共推荐排序。</p><label>邮箱地址<input id="emailInput" type="email" placeholder="name@lab.edu"></label><div class="subscription-topics" id="subscriptionTopics"></div><button class="primary-button" id="confirmSubscribe">保存订阅 →</button><p class="form-note" id="subscribeNote"></p></div></dialog>
+  <dialog id="savedDialog"><button class="dialog-close" onclick="savedDialog.close()" aria-label="关闭">×</button><div class="modal-copy"><p class="eyebrow">YOUR READING LIST</p><h2>我的阅读清单</h2><div id="savedList"></div></div></dialog>
+  <script src="app.js"></script>
+</body>
+</html>

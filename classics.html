@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="按研究问题和方法组织的酶学经典论文阅读库。">
+  <title>经典论文库 | Enzyme Atlas</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">EA</span><span>Enzyme Atlas</span></a>
+    <form class="site-search" action="search.html" role="search"><span class="search-icon" aria-hidden="true">⌕</span><input name="q" type="search" placeholder="搜索酶、EC 号、反应、底物、DOI 或作者" aria-label="全站文献搜索"><button>搜索</button></form>
+    <nav class="main-nav" aria-label="主导航"><a href="index.html#latest">本周精选</a><a href="index.html#all-papers">全部收录</a><a class="active" href="classics.html">经典论文</a><a href="topics.html">研究专题</a><a href="index.html#method">筛选标准</a></nav>
+  </header>
+
+  <main class="subpage-main classics-page">
+    <header class="subpage-hero"><div><p class="eyebrow">FOUNDATIONAL READING</p><h1>经典论文库</h1><p>经典不等于高被引。这里收录改变研究范式、建立常用方法、提出机制框架，或成为研究方向起点的工作。</p><div class="classic-rule"><span>范式转折</span><span>方法学基石</span><span>机制框架</span><span>专题入门</span><span>级联组装与融合</span></div></div></header>
+    <section class="subpage-content">
+      <p class="purpose-note">经典库用于系统学习，不参与每周新论文的推荐排序。优先纳入 Nature、Science、Cell 正刊的重要酶研究，并系统补充 Nature 子刊与少量其他期刊；每篇均可通过 DOI 直达出版页面。</p>
+      <div class="classic-source-stats" id="classicSourceStats" aria-label="经典论文来源统计"></div>
+      <div class="classic-toolbar">
+        <div><span class="toolbar-label">按出版来源浏览</span><p class="classic-count" id="classicCount" aria-live="polite">正在载入经典论文…</p></div>
+        <nav class="classic-filters" id="classicFilters" aria-label="经典论文来源筛选"></nav>
+      </div>
+      <section class="classic-grid" id="classicGrid"></section>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">EA</span><span>Enzyme Atlas</span></a><p>面向所有酶研究者的每周文献推荐平台。</p></div><div><strong>发现</strong><a href="index.html#latest">本周精选</a><a href="index.html#all-papers">全部收录</a></div><div><strong>阅读</strong><a href="classics.html">经典论文</a><a href="topics.html">研究专题</a></div><div><strong>关于</strong><a href="index.html#method">筛选标准</a><span>每周一更新</span></div></footer>
+  <script src="classics.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="按研究问题浏览 Enzyme Atlas 的酶学专题入口。">
+  <title>研究专题 | Enzyme Atlas</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">EA</span><span>Enzyme Atlas</span></a>
+    <form class="site-search" action="search.html" role="search"><span class="search-icon" aria-hidden="true">⌕</span><input name="q" type="search" placeholder="搜索酶、EC 号、反应、底物、DOI 或作者" aria-label="全站文献搜索"><button>搜索</button></form>
+    <nav class="main-nav" aria-label="主导航"><a href="index.html#latest">本周精选</a><a href="index.html#all-papers">全部收录</a><a href="classics.html">经典论文</a><a class="active" href="topics.html">研究专题</a><a href="index.html#method">筛选标准</a></nav>
+  </header>
+
+  <main class="subpage-main topics-page">
+    <header class="subpage-hero"><div><p class="eyebrow">EXPLORE BY QUESTION</p><h1>研究专题</h1><p>专题用于系统理解一个方向和进入阅读路径，不作为首页的重复筛选器。平台仍按公共领域价值进行每周推荐。</p></div></header>
+    <section class="subpage-content"><p class="purpose-note">如果你已有具体酶名、EC 号、反应或 DOI，请直接使用顶部搜索。若你想建立一个方向的整体认识，从下面的专题入口开始。</p><section class="topics-browser" id="topicsBrowser"></section></section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">EA</span><span>Enzyme Atlas</span></a><p>面向所有酶研究者的每周文献推荐平台。</p></div><div><strong>发现</strong><a href="index.html#latest">本周精选</a><a href="index.html#all-papers">全部收录</a></div><div><strong>阅读</strong><a href="classics.html">经典论文</a><a href="topics.html">研究专题</a></div><div><strong>关于</strong><a href="index.html#method">筛选标准</a><span>每周一更新</span></div></footer>
+  <script>
+    const topics = ['酶的发现与挖掘','定向进化与理性设计','酶的稳定性工程','酶的结构与催化机制','酶动力学、选择性与底物特异性','酶固定化与酶—材料体系','多酶级联反应','酶的级联组装','融合酶与多功能酶','计算酶学与分子模拟','AI 与机器学习辅助酶研究','酶催化方法与分析技术'];
+    document.getElementById('topicsBrowser').innerHTML = topics.map((topic, index) => `<a href="search.html?q=${encodeURIComponent(topic)}"><small>${String(index + 1).padStart(2, '0')}</small><h2>${topic}</h2></a>`).join('');
+  </script>
+</body>
+</html>
