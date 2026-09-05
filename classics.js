@@ -73,7 +73,12 @@ fetch('data/classics.json')
     return response.json();
   })
   .then(data => {
-    classics = data.items;
+    classics = [...data.items].sort((a, b) => {
+      const sourceDelta = sourceOrder.indexOf(a.sourceGroup) - sourceOrder.indexOf(b.sourceGroup);
+      if (sourceDelta) return sourceDelta;
+      const yearDelta = a.year - b.year;
+      return yearDelta || a.title.localeCompare(b.title, 'en');
+    });
     renderStats();
     renderFilters();
     renderGrid();
@@ -82,3 +87,4 @@ fetch('data/classics.json')
     console.error('经典论文载入失败', error);
     countNode.textContent = '经典论文暂时无法载入，请稍后刷新。';
   });
+

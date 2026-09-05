@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-01",
+  "updatedAt": "2026-09-05",
   "selectionPolicy": "优先收录改变酶学研究范式、建立关键方法或形成可复用工程框架的论文；Nature、Science、Cell 正刊优先，Nature Portfolio 子刊系统补充，其他期刊仅少量精选。",
   "items": [
     {
@@ -610,6 +610,315 @@
       "kind": "方法",
       "note": "提供融合方向、连接肽文库、Gibson 组装与定点突变的实操流程。",
       "doi": "10.1016/bs.mie.2025.01.013"
+    },
+    {
+      "topic": "结构酶学",
+      "year": 1965,
+      "title": "Structure of Hen Egg-White Lysozyme: A Three-dimensional Fourier Synthesis at 2 Å Resolution",
+      "authors": "Blake et al.",
+      "journal": "Nature",
+      "sourceGroup": "Nature 正刊",
+      "kind": "原创研究",
+      "note": "首次以近原子分辨率展示酶的三维结构，为从结构解释催化机制奠定基础。",
+      "doi": "10.1038/206757a0"
+    },
+    {
+      "topic": "定向进化",
+      "year": 1994,
+      "title": "Rapid evolution of a protein in vitro by DNA shuffling",
+      "authors": "Stemmer",
+      "journal": "Nature",
+      "sourceGroup": "Nature 正刊",
+      "kind": "原创研究",
+      "note": "建立 DNA shuffling，将有益突变重组为可迭代的体外蛋白进化路线。",
+      "doi": "10.1038/370389a0"
+    },
+    {
+      "topic": "塑料降解",
+      "year": 2020,
+      "title": "An engineered PET depolymerase to break down and recycle plastic bottles",
+      "authors": "Tournier et al.",
+      "journal": "Nature",
+      "sourceGroup": "Nature 正刊",
+      "kind": "原创研究",
+      "note": "把工程化 PET 解聚酶推进到高比例聚合物解聚与闭环回收验证。",
+      "doi": "10.1038/s41586-020-2149-4"
+    },
+    {
+      "topic": "机器学习与酶工程",
+      "year": 2022,
+      "title": "Machine learning-aided engineering of hydrolases for PET depolymerization",
+      "authors": "Lu et al.",
+      "journal": "Nature",
+      "sourceGroup": "Nature 正刊",
+      "kind": "原创研究",
+      "note": "以机器学习辅助筛选稳定突变，形成面向 PET 解聚的高效水解酶 FAST-PETase。",
+      "doi": "10.1038/s41586-022-04599-z"
+    },
+    {
+      "topic": "核酸酶",
+      "year": 2012,
+      "title": "A Programmable Dual-RNA–Guided DNA Endonuclease in Adaptive Bacterial Immunity",
+      "authors": "Jinek et al.",
+      "journal": "Science",
+      "sourceGroup": "Science 正刊",
+      "kind": "原创研究",
+      "note": "重构 RNA 引导的 Cas9 DNA 切割体系，确立可编程核酸酶的核心机制。",
+      "doi": "10.1126/science.1225829"
+    },
+    {
+      "topic": "非天然催化",
+      "year": 2013,
+      "title": "Olefin Cyclopropanation via Carbene Transfer Catalyzed by Engineered Cytochrome P450 Enzymes",
+      "authors": "Coelho et al.",
+      "journal": "Science",
+      "sourceGroup": "Science 正刊",
+      "kind": "原创研究",
+      "note": "证明工程化 P450 可催化天然代谢之外的卡宾转移与烯烃环丙烷化。",
+      "doi": "10.1126/science.1231434"
+    },
+    {
+      "topic": "结构酶学",
+      "year": 2014,
+      "title": "Structures of Cas9 Endonucleases Reveal RNA-Mediated Conformational Activation",
+      "authors": "Jinek et al.",
+      "journal": "Science",
+      "sourceGroup": "Science 正刊",
+      "kind": "原创研究",
+      "note": "通过结构比较揭示向导 RNA 如何驱动 Cas9 构象激活和靶 DNA 识别。",
+      "doi": "10.1126/science.1247997"
+    },
+    {
+      "topic": "非天然催化",
+      "year": 2018,
+      "title": "Enzymatic construction of highly strained carbocycles",
+      "authors": "Chen et al.",
+      "journal": "Science",
+      "sourceGroup": "Science 正刊",
+      "kind": "原创研究",
+      "note": "利用进化血红素酶构建高张力碳环，拓展生物催化可触及的化学空间。",
+      "doi": "10.1126/science.aar4239"
+    },
+    {
+      "topic": "结构酶学",
+      "year": 2014,
+      "title": "Crystal Structure of Cas9 in Complex with Guide RNA and Target DNA",
+      "authors": "Nishimasu et al.",
+      "journal": "Cell",
+      "sourceGroup": "Cell 正刊",
+      "kind": "原创研究",
+      "note": "解析 Cas9–向导 RNA–靶 DNA 三元复合物，为机制理解和核酸酶工程提供结构框架。",
+      "doi": "10.1016/j.cell.2014.02.001"
+    },
+    {
+      "topic": "定向进化",
+      "year": 1996,
+      "title": "Directed evolution of a para-nitrobenzyl esterase for aqueous-organic solvents",
+      "authors": "Moore & Arnold",
+      "journal": "Nature Biotechnology",
+      "sourceGroup": "Nature 子刊",
+      "kind": "原创研究",
+      "note": "展示多轮随机突变与筛选可累积小效应突变，提升酶在水–有机溶剂中的催化表现。",
+      "doi": "10.1038/nbt0496-458"
+    },
+    {
+      "topic": "定向进化",
+      "year": 1999,
+      "title": "Directed evolution of a fungal peroxidase",
+      "authors": "Cherry et al.",
+      "journal": "Nature Biotechnology",
+      "sourceGroup": "Nature 子刊",
+      "kind": "原创研究",
+      "note": "以真菌过氧化物酶展示分泌表达、稳定性与工业条件适应可由实验进化协同改进。",
+      "doi": "10.1038/7939"
+    },
+    {
+      "topic": "底物特异性",
+      "year": 2000,
+      "title": "Inverting enantioselectivity by directed evolution of hydantoinase for improved production of l-methionine",
+      "authors": "May et al.",
+      "journal": "Nature Biotechnology",
+      "sourceGroup": "Nature 子刊",
+      "kind": "原创研究",
+      "note": "通过定向进化反转水解酶对映选择性，并在三酶全细胞流程中验证生产收益。",
+      "doi": "10.1038/73773"
+    },
+    {
+      "topic": "稳定性工程",
+      "year": 1999,
+      "title": "Directed evolution of the surface chemistry of the reporter enzyme β-glucuronidase",
+      "authors": "Matsumura et al.",
+      "journal": "Nature Biotechnology",
+      "sourceGroup": "Nature 子刊",
+      "kind": "原创研究",
+      "note": "把表面化学作为进化对象，提高报告酶对组织固定剂失活的耐受性。",
+      "doi": "10.1038/10910"
+    },
+    {
+      "topic": "底物特异性",
+      "year": 2004,
+      "title": "Generic expansion of the substrate spectrum of a DNA polymerase by directed evolution",
+      "authors": "Ghadessy et al.",
+      "journal": "Nature Biotechnology",
+      "sourceGroup": "Nature 子刊",
+      "kind": "原创研究",
+      "note": "进化获得可处理多类非天然核苷酸和受损模板的广谱 DNA 聚合酶。",
+      "doi": "10.1038/nbt974"
+    },
+    {
+      "topic": "计算酶设计",
+      "year": 2013,
+      "title": "Evolution of a designed retro-aldolase leads to complete active site remodeling",
+      "authors": "Giger et al.",
+      "journal": "Nature Chemical Biology",
+      "sourceGroup": "Nature 子刊",
+      "kind": "原创研究",
+      "note": "跟踪计算设计逆醛缩酶经进化发生的活性位点重塑，连接从头设计与实验优化。",
+      "doi": "10.1038/nchembio.1276"
+    },
+    {
+      "topic": "从头酶设计",
+      "year": 2013,
+      "title": "Structure and dynamics of a primordial catalytic fold generated by in vitro evolution",
+      "authors": "Chao et al.",
+      "journal": "Nature Chemical Biology",
+      "sourceGroup": "Nature 子刊",
+      "kind": "原创研究",
+      "note": "解析由非催化支架体外进化得到的 RNA 连接酶，展示新催化折叠的结构与动态基础。",
+      "doi": "10.1038/nchembio.1138"
+    },
+    {
+      "topic": "酶的进化",
+      "year": 2018,
+      "title": "Evolution of cyclohexadienyl dehydratase from an ancestral solute-binding protein",
+      "authors": "Clifton et al.",
+      "journal": "Nature Chemical Biology",
+      "sourceGroup": "Nature 子刊",
+      "kind": "原创研究",
+      "note": "重建从祖先结合蛋白到脱水酶的演化中间态，拆解新催化功能出现的分子步骤。",
+      "doi": "10.1038/s41589-018-0043-2"
+    },
+    {
+      "topic": "从头酶设计",
+      "year": 2016,
+      "title": "Emergence of a catalytic tetrad during evolution of a highly active artificial aldolase",
+      "authors": "Obexer et al.",
+      "journal": "Nature Chemistry",
+      "sourceGroup": "Nature 子刊",
+      "kind": "原创研究",
+      "note": "揭示人工醛缩酶在进化中形成协同催化四联体，解释高活性如何逐步建立。",
+      "doi": "10.1038/nchem.2596"
+    },
+    {
+      "topic": "机器学习与酶工程",
+      "year": 2021,
+      "title": "Low-N protein engineering with data-efficient deep learning",
+      "authors": "Biswas et al.",
+      "journal": "Nature Methods",
+      "sourceGroup": "Nature 子刊",
+      "kind": "原创研究",
+      "note": "提出结合预训练序列表征与少量实验数据的蛋白工程路线，降低建模所需样本量。",
+      "doi": "10.1038/s41592-021-01100-y"
+    },
+    {
+      "topic": "定向进化",
+      "year": 1993,
+      "title": "Tuning the activity of an enzyme for unusual environments: sequential random mutagenesis of subtilisin E for catalysis in dimethylformamide",
+      "authors": "Chen & Arnold",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "sourceGroup": "其他精选",
+      "kind": "原创研究",
+      "note": "用连续随机诱变使枯草杆菌蛋白酶适应高浓度 DMF，是定向进化酶工程的奠基案例。",
+      "doi": "10.1073/pnas.90.12.5618"
+    },
+    {
+      "topic": "定向进化",
+      "year": 1994,
+      "title": "DNA shuffling by random fragmentation and reassembly: in vitro recombination for molecular evolution",
+      "authors": "Stemmer",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "sourceGroup": "其他精选",
+      "kind": "原创研究",
+      "note": "给出随机片段化与重组的 DNA shuffling 实验方法，奠定家族重组进化策略。",
+      "doi": "10.1073/pnas.91.22.10747"
+    },
+    {
+      "topic": "溶剂耐受性",
+      "year": 1996,
+      "title": "Directed evolution of subtilisin E in Bacillus subtilis to enhance total activity in aqueous dimethylformamide",
+      "authors": "You & Arnold",
+      "journal": "Protein Engineering, Design and Selection",
+      "sourceGroup": "其他精选",
+      "kind": "原创研究",
+      "note": "在天然宿主中进化枯草杆菌蛋白酶，强化其在含 DMF 体系中的总活性。",
+      "doi": "10.1093/protein/9.1.77"
+    },
+    {
+      "topic": "热稳定性工程",
+      "year": 1999,
+      "title": "Directed evolution converts subtilisin E into a functional equivalent of thermitase",
+      "authors": "Zhao & Arnold",
+      "journal": "Protein Engineering, Design and Selection",
+      "sourceGroup": "其他精选",
+      "kind": "原创研究",
+      "note": "通过多轮进化把中温蛋白酶推向类似天然耐热酶的功能表现。",
+      "doi": "10.1093/protein/12.1.47"
+    },
+    {
+      "topic": "酶的进化",
+      "year": 1999,
+      "title": "Catalytic promiscuity and the evolution of new enzymatic activities",
+      "authors": "O'Brien & Herschlag",
+      "journal": "Chemistry & Biology",
+      "sourceGroup": "其他精选",
+      "kind": "综述",
+      "note": "把催化多功能性与新酶活性的演化联系起来，形成理解功能创新的经典框架。",
+      "doi": "10.1016/S1074-5521(99)80033-7"
+    },
+    {
+      "topic": "稳定性工程",
+      "year": 2006,
+      "title": "Protein stability promotes evolvability",
+      "authors": "Bloom et al.",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "sourceGroup": "其他精选",
+      "kind": "原创研究",
+      "note": "实验证明额外稳定性可缓冲有害突变，从而扩大蛋白可探索的功能序列空间。",
+      "doi": "10.1073/pnas.0510098103"
+    },
+    {
+      "topic": "计算酶设计",
+      "year": 2012,
+      "title": "Iterative approach to computational enzyme design",
+      "authors": "Privett et al.",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "sourceGroup": "其他精选",
+      "kind": "原创研究",
+      "note": "以设计、实验结构和再设计的闭环迭代，提高计算酶设计模型与实测表现的一致性。",
+      "doi": "10.1073/pnas.1118082108"
+    },
+    {
+      "topic": "计算酶设计",
+      "year": 2013,
+      "title": "Computational Enzyme Design",
+      "authors": "Kiss et al.",
+      "journal": "Angewandte Chemie International Edition",
+      "sourceGroup": "其他精选",
+      "kind": "综述",
+      "note": "系统梳理过渡态建模、活性位点放置、序列优化与实验进化之间的设计链条。",
+      "doi": "10.1002/anie.201204077"
+    },
+    {
+      "topic": "多酶级联",
+      "year": 2018,
+      "title": "Artificial Biocatalytic Linear Cascades for Preparation of Organic Molecules",
+      "authors": "Schrittwieser et al.",
+      "journal": "Chemical Reviews",
+      "sourceGroup": "其他精选",
+      "kind": "综述",
+      "note": "建立人工线性生物催化级联的系统分类，覆盖全酶、化学–酶耦合及空间组织策略。",
+      "doi": "10.1021/acs.chemrev.7b00033"
     }
   ]
 }
+
