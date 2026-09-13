@@ -17,6 +17,15 @@ Enzyme Atlas is a recommendation-first literature site for all enzyme researcher
 Treat counts displayed by the site as derived data. Never introduce a promotional or hard-coded paper total.
 The Chinese values in the data files are canonical: they are the filter keys and the vocabulary keys. English is resolved at render time, so never rename a `topic`, `sourceGroup`, `kind` or `label` value without updating `i18n.js` (validation enforces coverage).
 
+## Public address and disclosure
+
+The site never hard-codes an address: pages use relative paths, and the canonical address lives only in `site.config.json`.
+
+- Change the address with `python scripts/set_site_address.py --url https://<neutral-address>/`; it syncs the page canonical/Open Graph tags, the README access block and `CNAME`.
+- `python scripts/set_site_address.py --check` fails when the checked-in tags drift from the config; CI runs it.
+- Never write a hosting-brand marker or a personal account name into any tracked file. `scripts/check_public_disclosure.py` fails the build on a match, deriving the personal-account token from `git remote get-url origin` and reading extra tokens from the git-ignored `scripts/disclosure.local.json`.
+- Keep `scripts/disclosure.local.json` out of git: the repository must not restate the words it is meant to hide.
+
 ## Evidence rules
 
 - Use DOI/publisher metadata to identify papers and check version relationships.
@@ -42,6 +51,8 @@ The Chinese values in the data files are canonical: they are the filter keys and
 python scripts/validate_site.py
 python scripts/validate_site.py --online
 python scripts/test_weekly_pipeline.py
+python scripts/check_public_disclosure.py --verbose
+python scripts/set_site_address.py --check
 node --check i18n.js
 node --check app.js
 node --check search.js
@@ -50,6 +61,6 @@ node --check archive.js
 node scripts/test_classics_ui.js
 ```
 
-After a successful Pages deployment, run `scripts/verify_public_site.py` against the URL derived from the Git remote. The script must confirm the homepage, classics page, archive page, i18n runtime, weekly data, edition manifest, exact checked-out classic count, requested edition, and English coverage of both data sets.
+After a successful deployment, run `scripts/verify_public_site.py --from-config` against the address recorded in `site.config.json`. The script must confirm the homepage, classics page, archive page, i18n runtime, weekly data, edition manifest, exact checked-out classic count, requested edition, and English coverage of both data sets.
 
 

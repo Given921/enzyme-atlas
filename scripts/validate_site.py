@@ -15,6 +15,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 from weekly_contract import validate_edition
+from check_public_disclosure import active_deny_tokens, scan as scan_disclosure
 
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser()
@@ -162,9 +163,45 @@ gitignore = (ROOT / ".gitignore").read_text(encoding="utf-8")
 assert "data/staging" in gitignore, "staging data is not excluded from release commits"
 assert "data/history" not in gitignore, "archived editions must be committed, otherwise the public archive cannot load them"
 assert (ROOT / ".github" / "workflows" / "pages.yml").exists(), "GitHub Pages workflow is missing"
+
+# ---- public address + disclosure guards ------------------------------------
+leaks = scan_disclosure(ROOT, active_deny_tokens())
+assert not leaks, f"disclosure leak(s) in published files: {leaks}"
+site_config = json.loads((ROOT / "site.config.json").read_text(encoding="utf-8"))
+assert site_config.get("managedBy") == "scripts/set_site_address.py", "site.config.json must be managed by scripts/set_site_address.py"
+assert "siteUrl" in site_config and "canonicalHost" in site_config, "site.config.json is missing address fields"
+site_url = (site_config.get("siteUrl") or "").strip()
+if site_url:
+    assert site_url.startswith(("http://", "https://")) and site_url.endswith("/"), "site.config.json siteUrl must be an absolute address ending in /"
+    assert site_url.count("/") >= 3, "siteUrl does not look like a full public address"
+for page in ("index.html", "classics.html", "topics.html", "search.html", "archive.html"):
+    html = (ROOT / page).read_text(encoding="utf-8")
+    has_block = "<!-- ea-address:start -->" in html
+    assert has_block == bool(site_url), f"{page} canonical block does not match site.config.json"
+    if site_url:
+        assert '<link rel="canonical" href="' in html, f"{page} is missing the canonical link"
+        assert 'property="og:url"' in html, f"{page} is missing the Open Graph URL"
+readme_html = (ROOT / "README.md").read_text(encoding="utf-8")
+assert "<!-- ea-address:start -->" in readme_html and "<!-- ea-address:end -->" in readme_html, "README is missing the managed address block"
+assert (ROOT / "CNAME").exists() == bool(site_url and not site_config["canonicalHost"].endswith(".github.io")), "CNAME does not match the configured address"
+
+# ---- host portability ------------------------------------------------------
+# Strip the managed block, then prove nothing else pins the site to a host or a
+# root-absolute path: the same checkout must work on any domain or sub-path.
+address_block = re.compile(r"<!-- ea-address:start -->.*?<!-- ea-address:end -->", re.DOTALL)
+for page in ("index.html", "classics.html", "topics.html", "search.html", "archive.html"):
+    bare = address_block.sub("", (ROOT / page).read_text(encoding="utf-8"))
+    assert not re.search(r'(?:href|src)="/', bare), f"{page} uses a root-absolute path and would break under a sub-path"
+    assert "http://" not in bare and "https://" not in bare, f"{page} pins an absolute URL outside the managed address block"
+for script in ("i18n.js", "app.js", "classics.js", "archive.js", "search.js"):
+    bare = address_block.sub("", (ROOT / script).read_text(encoding="utf-8"))
+    assert not re.search(r'fetch\(\s*"/', bare), f"{script} fetches from a root-absolute path"
+    assert not re.search(r"""(?:src|href)\s*=\s*["']/""", bare), f"{script} links to a root-absolute path"
+
 online_note = "; Crossref DOI verification passed" if args.online else ""
 print(
     f"PASS: edition {data['edition']:02d} with {len(items)} weekly real-DOI records; "
     f"{sum(bool(p['featured']) for p in items)} featured; {len(classics)} DOI-linked classics; "
-    f"{len(entries)} archived editions; bilingual contracts valid{online_note}"
+    f"{len(entries)} archived editions; bilingual contracts valid; "
+    f"address {'configured' if site_url else 'unset (relative paths only)'}{online_note}"
 )

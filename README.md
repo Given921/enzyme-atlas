@@ -2,7 +2,9 @@
 
 **面向所有酶研究者的每周文献推荐平台。** 每周一整理值得优先阅读的新论文，并维护按研究问题组织的经典文献库；不做个人相关性排序，也不试图替代通用文献搜索引擎。
 
-[进入公开网站](https://given921.github.io/enzyme-atlas/) · [浏览经典论文](https://given921.github.io/enzyme-atlas/classics.html) · [查看筛选标准](https://given921.github.io/enzyme-atlas/#method)
+<!-- ea-address:start -->
+> 公开地址尚未配置。站点不内置任何绝对地址，可部署到任意域名或子目录；运行 `python scripts/set_site_address.py --url https://<中性地址>/` 后，本行会自动替换为公开入口。
+<!-- ea-address:end -->
 
 | 📖 读者 | 🧰 开发者 | 🤖 Agent |
 | --- | --- | --- |
@@ -52,6 +54,8 @@ python -m http.server 4173
 ```powershell
 python scripts/validate_site.py
 python scripts/test_weekly_pipeline.py
+python scripts/check_public_disclosure.py --verbose
+python scripts/set_site_address.py --check
 node --check i18n.js
 node --check app.js
 node --check search.js
@@ -69,8 +73,10 @@ python scripts/validate_site.py --online
 `.github/workflows/pages.yml` 会在 `main` 更新后先执行校验，再部署 GitHub Pages。公网验收脚本默认从当前检出的 `data/classics.json` 读取应发布的经典文献数量，避免写死统计：
 
 ```powershell
-python scripts/verify_public_site.py --base-url https://given921.github.io/enzyme-atlas/ --edition 2026-09-07
+python scripts/verify_public_site.py --from-config --edition 2026-09-07
 ```
+
+地址由 `site.config.json` 提供；也可临时用 `--base-url https://…` 覆盖。未配置地址时脚本会提示先运行 `scripts/set_site_address.py`。
 
 验收脚本同时检查首页、经典库、归档页、`i18n.js`、期号清单与两处数据的英文覆盖。
 
@@ -113,6 +119,31 @@ python scripts/publish_weekly.py --input data/staging/curated-2026-09-14.json --
 
 - 邮件订阅仍是本地偏好演示，尚未接入邮件服务。
 - 归档页为只读视图：收藏与阅读清单只作用于首页当期。
-- GitHub 组织主页迁移完成前，公开地址仍为 `given921.github.io/enzyme-atlas/`（国内网络可能需镜像入口）。
+- 站点不内置任何绝对地址，可部署到任意域名或子目录；公开地址通过 `site.config.json` 统一下发（见下）。
 - 搜索功能服务于站内已知论文查找，不扩展为通用全文检索引擎。
+
+## 公开地址配置
+
+站点输出中不出现托管商品牌字样，也不出现个人账号信息。地址只在一个地方维护：
+
+```powershell
+# 设置中性公开地址（会同步页面 canonical / og 标签、README 入口与 CNAME）
+python scripts/set_site_address.py --url https://<中性地址>/ --contact-email <公开联系邮箱>
+
+# 清除地址（恢复为“未配置”状态）
+python scripts/set_site_address.py --clear
+
+# 校验已提交文件是否与 site.config.json 一致（CI 也会执行）
+python scripts/set_site_address.py --check
+```
+
+命名与泄露防护：
+
+```powershell
+# 本地、被 git 忽略的敏感词清单：仓库本身不会写进这些词
+python scripts/check_public_disclosure.py --verbose
+```
+
+`check_public_disclosure.py` 会扫描所有已跟踪文件，命中「本地敏感词清单」或「git remote 中的仓库属主名」即失败。
+由于属主名是从 `git remote` 实时推导的，纯克隆环境（含 CI）同样能拦住个人账号名。
 

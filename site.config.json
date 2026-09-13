@@ -1,0 +1,14 @@
+{
+  "siteUrl": "",
+  "canonicalHost": "",
+  "siteName": "Enzyme Atlas",
+  "publisher": "",
+  "contactEmail": "hello@enzyme-atlas.org",
+  "disclosure": {
+    "deriveOwnerFromGitRemote": true,
+    "denyTokens": [],
+    "localPolicy": "scripts/disclosure.local.json"
+  },
+  "updatedAt": "",
+  "managedBy": "scripts/set_site_address.py"
+}

@@ -2,3 +2,4 @@ data/staging/
 *.tmp
 __pycache__/
 *.pyc
+scripts/disclosure.local.json

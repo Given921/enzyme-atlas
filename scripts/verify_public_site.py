@@ -1,4 +1,4 @@
-"""Verify the GitHub Pages edition after deployment."""
+"""Verify the deployed site at the configured public address."""
 from __future__ import annotations
 
 import argparse
@@ -62,9 +62,25 @@ def verify(base_url: str, edition: str | None, expected_classics: int) -> None:
     )
 
 
+def resolve_base_url(explicit: str | None) -> str:
+    """Use --base-url when given, otherwise read the address from site.config.json."""
+    if explicit:
+        return explicit
+    config_path = ROOT / "site.config.json"
+    config = json.loads(config_path.read_text(encoding="utf-8")) if config_path.exists() else {}
+    url = (config.get("siteUrl") or "").strip()
+    if not url:
+        raise SystemExit(
+            "no --base-url given and site.config.json has no siteUrl; "
+            "run `python scripts/set_site_address.py --url https://<address>/` first"
+        )
+    return url
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--base-url", required=True)
+    parser.add_argument("--base-url", help="Public base address; defaults to site.config.json")
+    parser.add_argument("--from-config", action="store_true", help="Read the address from site.config.json (default when --base-url is omitted)")
     parser.add_argument("--edition")
     parser.add_argument(
         "--classic-count",
@@ -75,10 +91,11 @@ def main() -> None:
     parser.add_argument("--attempts", type=int, default=12)
     parser.add_argument("--delay", type=int, default=10)
     args = parser.parse_args()
+    base_url = resolve_base_url(args.base_url)
     last_error: Exception | None = None
     for attempt in range(args.attempts):
         try:
-            verify(args.base_url, args.edition, args.classic_count)
+            verify(base_url, args.edition, args.classic_count)
             return
         except (RuntimeError, HTTPError, URLError, TimeoutError, json.JSONDecodeError) as error:
             last_error = error

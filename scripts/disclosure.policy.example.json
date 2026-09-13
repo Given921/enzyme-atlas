@@ -1,0 +1,14 @@
+{
+  "denyTokens": [
+    "<host-brand-marker>",
+    "<personal-account-name>"
+  ],
+  "notes": [
+    "This is an EXAMPLE. Copy it to scripts/disclosure.local.json, which is git-ignored,",
+    "and replace the placeholders with the real tokens that must never reach a published file.",
+    "Keeping the real list out of git means the repository itself never restates the very",
+    "words it is meant to hide.",
+    "scripts/check_public_disclosure.py additionally derives the repository owner from the",
+    "git remote, so the personal-account rule is enforced even on a clean checkout."
+  ]
+}
