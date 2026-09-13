@@ -78,6 +78,34 @@ def load_local_policy(config: dict) -> list[str]:
         return []
 
 
+def _slug(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "", (value or "").lower())
+
+
+def owner_is_generic(owner: str, config: dict) -> bool:
+    """True when the repository owner is not a personal identifier.
+
+    Covers two cases that would otherwise flood the build with false positives
+    after moving the repo to a neutral organization:
+
+    * the owner is the project's own name (``enzyme-atlas`` vs site name), or
+    * the owner already appears in the site's configured public address, which
+      means it is published on purpose.
+
+    Only the *derived* owner is exempt. Tokens listed explicitly in
+    ``disclosure.denyTokens`` or in the local policy file are always enforced,
+    so this escape hatch can never weaken an intentional rule.
+    Set ``disclosure.ownerExemptIfGeneric`` to false to disable it entirely.
+    """
+    if not (config.get("disclosure") or {}).get("ownerExemptIfGeneric", True):
+        return False
+    needle = _slug(owner)
+    if not needle:
+        return False
+    candidates = {_slug(config.get("siteName")), _slug(ROOT.name), _slug(config.get("siteUrl"))}
+    return any(needle in candidate for candidate in candidates if candidate)
+
+
 def active_deny_tokens(config: dict | None = None) -> list[str]:
     """Every token that must not appear in a published file."""
     if config is None:
@@ -88,7 +116,7 @@ def active_deny_tokens(config: dict | None = None) -> list[str]:
     raw += load_local_policy(config)
     if disclosure.get("deriveOwnerFromGitRemote", True):
         owner = git_remote_owner()
-        if owner:
+        if owner and not owner_is_generic(owner, config):
             raw.append(owner)
     # publisher / contactEmail are intentionally public, so they are never denied
     seen: list[str] = []
