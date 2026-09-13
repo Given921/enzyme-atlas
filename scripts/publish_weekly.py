@@ -13,7 +13,7 @@ from urllib.request import Request, urlopen
 SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
-from weekly_contract import load_json, validate_edition
+from weekly_contract import build_editions_manifest, load_json, validate_edition
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -39,25 +39,49 @@ def verify_doi(item: dict) -> str:
     return item["doi"]
 
 
-def publish(source: Path, target: Path, history_dir: Path, online: bool) -> None:
+def publish(source: Path, target: Path, history_dir: Path, online: bool, manifest_path: Path | None = None) -> dict:
     data = load_json(source)
+
+    target.parent.mkdir(parents=True, exist_ok=True)
+    history_dir.mkdir(parents=True, exist_ok=True)
+    manifest_path = manifest_path or target.parent / "editions.json"
+
+    previous = load_json(target) if target.exists() else None
+    previous_edition = previous.get("edition") if previous else None
+
+    # Edition numbers are derived from the archived sequence: a curated file may
+    # omit `edition` and it will be assigned previous + 1. When it is present it
+    # must continue the sequence, so an out-of-order file can never be published.
+    if not data.get("edition"):
+        data["edition"] = previous_edition + 1 if isinstance(previous_edition, int) else 1
+    elif isinstance(previous_edition, int) and data["edition"] != previous_edition + 1:
+        raise ValueError(
+            f"edition number must be {previous_edition + 1} after edition {previous_edition}, got {data['edition']!r}"
+        )
+    elif previous_edition is None and data["edition"] != 1:
+        raise ValueError(f"first published edition must be edition 1, got {data['edition']!r}")
+
     validate_edition(data)
     if online:
         for item in data["items"]:
             verify_doi(item)
 
-    target.parent.mkdir(parents=True, exist_ok=True)
-    history_dir.mkdir(parents=True, exist_ok=True)
-    if target.exists():
-        previous = load_json(target)
+    if previous is not None:
         previous_date = previous.get("updatedAt", "unknown")
         backup = history_dir / f"papers-{previous_date}.json"
         if not backup.exists():
             shutil.copy2(target, backup)
 
+    manifest = build_editions_manifest(data, history_dir)
+
     temporary = target.with_suffix(target.suffix + ".tmp")
     temporary.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     temporary.replace(target)
+
+    manifest_temporary = manifest_path.with_suffix(manifest_path.suffix + ".tmp")
+    manifest_temporary.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    manifest_temporary.replace(manifest_path)
+    return manifest
 
 
 def main() -> None:
@@ -66,15 +90,21 @@ def main() -> None:
     parser.add_argument("--online", action="store_true", help="Resolve DOI and inspect correction/retraction relations.")
     parser.add_argument("--target", type=Path, default=ROOT / "data" / "papers.json")
     parser.add_argument("--history-dir", type=Path, default=ROOT / "data" / "history")
+    parser.add_argument("--manifest", type=Path, default=ROOT / "data" / "editions.json")
     args = parser.parse_args()
     source = args.input if args.input.is_absolute() else ROOT / args.input
     target = args.target if args.target.is_absolute() else ROOT / args.target
     history_dir = args.history_dir if args.history_dir.is_absolute() else ROOT / args.history_dir
+    manifest = args.manifest if args.manifest.is_absolute() else ROOT / args.manifest
     if source.resolve() == target.resolve():
         raise ValueError("input must be a staging file, not the published data file")
-    publish(source, target, history_dir, args.online)
+    published_manifest = publish(source, target, history_dir, args.online, manifest)
     data = load_json(target)
-    print(f"Published {len(data['items'])} papers ({sum(bool(p['featured']) for p in data['items'])} featured) for {data['updatedAt']}")
+    print(
+        f"Published edition {data['edition']:02d}: {len(data['items'])} papers "
+        f"({sum(bool(p['featured']) for p in data['items'])} featured) for {data['updatedAt']}"
+    )
+    print(f"Archive manifest now lists editions: {[entry['edition'] for entry in published_manifest['editions']]}")
 
 
 if __name__ == "__main__":

@@ -1,8 +1,12 @@
+/* Canonical source groups (Chinese keys are also the data vocabulary and filter keys). */
 const sourceOrder = ['全部', 'Nature 正刊', 'Science 正刊', 'Cell 正刊', 'Nature 子刊', '其他精选'];
 const countNode = document.getElementById('classicCount');
 const gridNode = document.getElementById('classicGrid');
 const statsNode = document.getElementById('classicSourceStats');
 const filtersNode = document.getElementById('classicFilters');
+
+const T = (key, vars) => EA.t(key, vars);
+const displaySource = source => (source === '全部' ? T('classics_filter_all') : EA.v('sourceGroups', source));
 
 let classics = [];
 let activeSource = '全部';
@@ -25,7 +29,7 @@ function renderStats() {
   statsNode.innerHTML = sourceOrder.slice(1).map(source => `
     <div class="classic-source-stat">
       <strong>${counts[source]}</strong>
-      <span>${escapeHtml(source)}</span>
+      <span>${escapeHtml(displaySource(source))}</span>
     </div>
   `).join('');
 }
@@ -33,7 +37,7 @@ function renderStats() {
 function renderFilters() {
   filtersNode.innerHTML = sourceOrder.map(source => {
     const selected = source === activeSource;
-    return `<button type="button" class="classic-filter${selected ? ' active' : ''}" data-source="${escapeHtml(source)}" aria-pressed="${selected}">${escapeHtml(source)}</button>`;
+    return `<button type="button" class="classic-filter${selected ? ' active' : ''}" data-source="${escapeHtml(source)}" aria-pressed="${selected}">${escapeHtml(displaySource(source))}</button>`;
   }).join('');
 }
 
@@ -43,17 +47,17 @@ function renderGrid() {
     : classics.filter(item => item.sourceGroup === activeSource);
   const topicCount = new Set(visible.map(item => item.topic)).size;
   countNode.innerHTML = activeSource === '全部'
-    ? `共整理 <strong>${classics.length}</strong> 篇 · 覆盖 ${topicCount} 条阅读路径 · 每篇均有 DOI / 出版社入口`
-    : `${escapeHtml(activeSource)} <strong>${visible.length}</strong> 篇 · 覆盖 ${topicCount} 条阅读路径`;
+    ? T('classics_count_all', { n: classics.length, m: topicCount })
+    : T('classics_count_filter', { source: escapeHtml(displaySource(activeSource)), n: visible.length, m: topicCount });
   gridNode.innerHTML = visible.map(item => `
     <article class="classic-card">
-      <div class="classic-meta"><span>${escapeHtml(item.topic)}</span><span>${item.year}</span></div>
-      <div class="classic-badges"><span class="source-badge">${escapeHtml(item.sourceGroup)}</span><span>${escapeHtml(item.kind)}</span></div>
+      <div class="classic-meta"><span>${escapeHtml(EA.classicTopic(item))}</span><span>${item.year}</span></div>
+      <div class="classic-badges"><span class="source-badge">${escapeHtml(EA.sourceGroup(item))}</span><span>${escapeHtml(EA.kind(item))}</span></div>
       <h2>${escapeHtml(item.title)}</h2>
-      <p class="classic-note">${escapeHtml(item.note)}</p>
+      <p class="classic-note">${escapeHtml(EA.pick(item, 'note'))}</p>
       <div class="classic-bottom">
         <div class="classic-citation">${escapeHtml(item.authors)} · ${escapeHtml(item.journal)}</div>
-        <a href="${doiUrl(item.doi)}" target="_blank" rel="noopener">打开 DOI / 出版社页面 ↗</a>
+        <a href="${doiUrl(item.doi)}" target="_blank" rel="noopener">${T('classics_doi_link')}</a>
       </div>
     </article>
   `).join('');
@@ -63,6 +67,13 @@ filtersNode.addEventListener('click', event => {
   const button = event.target.closest('button[data-source]');
   if (!button) return;
   activeSource = button.dataset.source;
+  renderFilters();
+  renderGrid();
+});
+
+EA.onChange(() => {
+  if (!classics.length) return;
+  renderStats();
   renderFilters();
   renderGrid();
 });
@@ -85,6 +96,5 @@ fetch('data/classics.json')
   })
   .catch(error => {
     console.error('经典论文载入失败', error);
-    countNode.textContent = '经典论文暂时无法载入，请稍后刷新。';
+    countNode.textContent = T('classics_error');
   });
-

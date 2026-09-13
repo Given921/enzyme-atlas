@@ -1,5 +1,4 @@
 data/staging/
-data/history/
 *.tmp
 __pycache__/
 *.pyc

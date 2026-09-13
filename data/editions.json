@@ -1,0 +1,32 @@
+{
+  "updatedAt": "2026-09-07",
+  "current": 2,
+  "editions": [
+    {
+      "edition": 2,
+      "updatedAt": "2026-09-07",
+      "periodStart": "2026-08-31",
+      "periodEnd": "2026-09-07",
+      "itemCount": 9,
+      "featuredCount": 5,
+      "headline": "CatESO：由底物感知 Kcat 预测引导的可微分酶序列优化",
+      "en": {
+        "headline": "CatESO: Differentiable Enzyme Sequence Optimization Guided by Substrate-Aware Kcat Prediction"
+      },
+      "path": "data/papers.json"
+    },
+    {
+      "edition": 1,
+      "updatedAt": "2026-08-31",
+      "periodStart": "2026-08-24",
+      "periodEnd": "2026-08-31",
+      "itemCount": 9,
+      "featuredCount": 5,
+      "headline": "蛋白语言模型生成的酶序列在分子动力学模拟中表现出较高结构稳定性",
+      "en": {
+        "headline": "Protein language model-generated enzyme sequences exhibit high stability in molecular dynamics simulations"
+      },
+      "path": "data/history/papers-2026-08-31.json"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="按期号回看 Enzyme Atlas 每一期的编辑精选与完整收录。">
+  <title>往期精选 | Enzyme Atlas</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="i18n.js"></script>
+</head>
+<body data-page="archive">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Enzyme Atlas 首页" data-i18n-aria="brand_aria"><span class="brand-mark" aria-hidden="true">EA</span><span>Enzyme Atlas</span></a>
+    <form class="site-search" action="search.html" role="search"><span class="search-icon" aria-hidden="true">⌕</span><input name="q" type="search" placeholder="搜索酶、EC 号、反应、底物、DOI 或作者" aria-label="全站文献搜索" data-i18n-placeholder="search_placeholder" data-i18n-aria="search_aria"><button data-i18n="search_button">搜索</button></form>
+    <nav class="main-nav" aria-label="主导航" data-i18n-aria="nav_aria"><a href="index.html#latest" data-i18n="nav_home">本周精选</a><a href="index.html#all-papers" data-i18n="nav_all">全部收录</a><a class="active" href="archive.html" data-i18n="nav_editions">往期精选</a><a href="classics.html" data-i18n="nav_classics">经典论文</a><a href="topics.html" data-i18n="nav_topics">研究专题</a><a href="index.html#method" data-i18n="nav_method">筛选标准</a></nav>
+    <div class="header-actions"><span class="lang-slot" data-lang-slot></span></div>
+  </header>
+
+  <main class="subpage-main archive-page">
+    <header class="subpage-hero"><div><p class="eyebrow" data-i18n="archive_eyebrow">EDITION ARCHIVE</p><h1 data-i18n="archive_title">往期精选</h1><p data-i18n="archive_desc">按期号存档每一期推荐与完整收录，可逐期回看。</p><div class="classic-rule"><span data-i18n="rule_paradigm">范式转折</span><span data-i18n="rule_method">方法学基石</span><span data-i18n="rule_mechanism">机制框架</span><span data-i18n="rule_primer">专题入门</span><span data-i18n="rule_cascade">级联组装与融合</span></div></div></header>
+    <section class="subpage-content">
+      <div class="archive-toolbar">
+        <div><span class="toolbar-label" data-i18n="archive_switch_label">按期号浏览</span><p class="classic-count" id="archiveStatus" aria-live="polite" data-i18n="archive_loading">正在载入期号数据…</p></div>
+        <nav class="classic-filters" id="editionSwitcher" aria-label="往期期号"></nav>
+      </div>
+      <p class="archive-viewing" id="archiveViewing" hidden></p>
+      <a class="archive-back" id="archiveBack" href="archive.html" hidden data-i18n="archive_back">← 返回期号列表</a>
+      <p class="archive-note" id="archiveNote" hidden data-i18n="archive_readonly_note">往期内容为存档视图，收藏与阅读清单请回到首页当期使用。</p>
+
+      <section class="edition-grid" id="archiveList"></section>
+
+      <div id="archiveDetail" hidden>
+        <section class="section featured-section"><div class="section-heading"><div><p class="eyebrow" data-i18n="featured_eyebrow">CURATED THIS WEEK</p><h2 id="archiveFeaturedTitle"></h2></div></div><div class="feature-grid" id="archiveFeatured"></div></section>
+        <section class="section paper-section"><div class="section-heading paper-heading"><div><p class="eyebrow" data-i18n="intake_eyebrow">COMPLETE INTAKE</p><h2 id="archiveIntakeTitle" data-i18n="archive_intake_title">该期全部收录</h2></div></div><p class="result-count" id="archiveCount"></p><div class="paper-list" id="archivePapers"></div></section>
+        <section class="section observation-section"><div class="section-heading"><div><p class="eyebrow" data-i18n="obs_eyebrow">EDITORIAL NOTES</p><h2 data-i18n="archive_obs_title">该期领域观察</h2></div></div><div class="observation-grid" id="archiveObservations"></div></section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">EA</span><span>Enzyme Atlas</span></a><p data-i18n="footer_desc">面向所有酶研究者的每周文献推荐平台。</p></div><div><strong data-i18n="footer_discover">发现</strong><a href="index.html#latest" data-i18n="nav_home">本周精选</a><a href="index.html#all-papers" data-i18n="nav_all">全部收录</a><a href="archive.html" data-i18n="nav_editions">往期精选</a></div><div><strong data-i18n="footer_reading">阅读</strong><a href="classics.html" data-i18n="nav_classics">经典论文</a><a href="topics.html" data-i18n="nav_topics">研究专题</a></div><div><strong data-i18n="footer_about">关于</strong><a href="index.html#method" data-i18n="nav_method">筛选标准</a><span data-i18n="footer_weekly">每周一更新</span></div></footer>
+  <script src="archive.js"></script>
+</body>
+</html>

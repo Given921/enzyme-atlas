@@ -24,18 +24,41 @@ def verify(base_url: str, edition: str | None, expected_classics: int) -> None:
     base = base_url.rstrip("/") + "/"
     homepage = fetch(base).decode("utf-8")
     classics_page = fetch(base + "classics.html").decode("utf-8")
+    archive_page = fetch(base + "archive.html").decode("utf-8")
+    runtime = fetch(base + "i18n.js").decode("utf-8")
     papers = json.loads(fetch(base + "data/papers.json"))
     classics = json.loads(fetch(base + "data/classics.json"))
+    manifest = json.loads(fetch(base + "data/editions.json"))
     if "Enzyme Atlas" not in homepage or "本周精选" not in homepage:
         raise RuntimeError("public homepage content is incomplete")
+    if "data-lang-slot" not in homepage or "data-lang-slot" not in classics_page:
+        raise RuntimeError("public pages are missing the bilingual language switch")
+    if "data-lang-option" not in runtime or "classicTopics" not in runtime:
+        raise RuntimeError("public i18n runtime is incomplete")
+    if "editionSwitcher" not in archive_page or "archiveDetail" not in archive_page:
+        raise RuntimeError("public archive page is incomplete")
     public_classics = len(classics.get("items", []))
     if "经典" not in classics_page or public_classics != expected_classics:
         raise RuntimeError(f"public classics library has {public_classics} records, expected {expected_classics}")
     if edition and papers.get("updatedAt") != edition:
         raise RuntimeError(f"public edition is {papers.get('updatedAt')}, expected {edition}")
+    if manifest.get("current") != papers.get("edition"):
+        raise RuntimeError(f"public manifest edition {manifest.get('current')} does not match papers.json edition {papers.get('edition')}")
+    editions = manifest.get("editions", [])
+    if len(editions) < 2:
+        raise RuntimeError(f"public archive lists only {len(editions)} edition(s)")
+    for entry in editions:
+        if not entry.get("path"):
+            raise RuntimeError(f"archive entry {entry.get('edition')} has no data path")
+        if entry["path"] != "data/papers.json":
+            fetch(base + entry["path"])
+    if not all(item.get("en") for item in papers.get("items", [])):
+        raise RuntimeError("public weekly edition is missing English copy")
+    if not all(item.get("en") for item in classics.get("items", [])):
+        raise RuntimeError("public classics are missing English copy")
     print(
-        f"PASS: public homepage, classics and data are live at {base}; "
-        f"edition={papers.get('updatedAt')}; classics={public_classics}"
+        f"PASS: public homepage, classics, archive and data are live at {base}; "
+        f"edition={papers.get('updatedAt')} (#{papers.get('edition')}); classics={public_classics}; editions={len(editions)}"
     )
 
 

@@ -29,9 +29,11 @@ jobs:
         run: |
           python scripts/validate_site.py
           python scripts/test_weekly_pipeline.py
+          node --check i18n.js
           node --check app.js
           node --check search.js
           node --check classics.js
+          node --check archive.js
           node scripts/test_classics_ui.js
 
   deploy:

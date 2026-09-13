@@ -40,7 +40,14 @@
         "Kcat 预测",
         "可微优化"
       ],
-      "verification": "Crossref 记录、DOI 与摘要已核验；湿实验验证规模以原文为准，更正/撤稿状态未独立审计。"
+      "verification": "Crossref 记录、DOI 与摘要已核验；湿实验验证规模以原文为准，更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "CatESO turns substrate-aware Kcat prediction into a differentiable module embedded directly in enzyme sequence generation, so that raising the catalytic turnover number becomes the design objective itself rather than a filter applied afterwards.",
+        "why": "It attacks the hardest trade-off in enzyme design: measured rate constants are scarce and sequence space is vast. Folding a kinetic objective and sequence generation into one differentiable optimisation problem is a signature step from score-and-filter towards objective-driven design in AI enzyme engineering.",
+        "evidence": "The abstract states explicitly that existing deep-learning Kcat models are usually applied for scoring or filtering after sequences are generated, which disconnects the kinetic objective from design; CatESO bridges that gap through differentiable optimisation. Concrete benchmark numbers and the scale of experimental validation rest with the source paper; the abstract reports no wet-lab expression or activity data.",
+        "audience": "Researchers in AI enzyme design, enzyme kinetics prediction and computationally assisted directed evolution",
+        "verification": "Crossref record, DOI and abstract verified; the scale of wet-lab validation rests with the source paper, and correction/retraction status was not independently audited."
+      }
     },
     {
       "id": "hurrell-2026-tunb-ccb",
@@ -64,7 +71,14 @@
         "无辅因子",
         "有预印本"
       ],
-      "verification": "Crossref 记录、DOI、摘要与预印本关系已核验；更正/撤稿状态未独立审计。"
+      "verification": "Crossref 记录、DOI、摘要与预印本关系已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "The study identifies the enzyme TunB, which forms an intermolecular carbon–carbon bond from chorismate without any cofactor, participating in biosynthesis of the methanotroph natural product tundrenone, and whose chorismate substrate could not be predicted from sequence.",
+        "why": "Chorismate is an important precursor for many metabolites, yet the known reaction types built on it are limited. A cofactor-free intermolecular C–C bond-forming enzyme widens the biocatalytic toolbox around chorismate and warns that sequence similarity alone misses reactions of this kind.",
+        "evidence": "The abstract confirms that TunB catalyses intermolecular C–C bond formation from chorismate without a cofactor and that sequence analysis failed to predict this substrate; structural and kinetic details of the mechanism rest with the source paper. A ChemRxiv preprint precedes it (10.26434/chemrxiv.15002986/v1).",
+        "audience": "Researchers in enzyme mechanisms, natural product biosynthesis and biocatalytic C–C bond construction",
+        "verification": "Crossref record, DOI, abstract and the preprint relationship verified; correction/retraction status was not independently audited."
+      }
     },
     {
       "id": "kim-2026-coevolution-epistasis",
@@ -88,7 +102,14 @@
         "组合突变",
         "MSA 方法"
       ],
-      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。"
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Addressing the frequent failure of MSA-based models such as SCANEER when predicting mutations in combination because of epistatic interactions, this work models sequence co-evolution and epistatic relationships explicitly to improve prediction accuracy in enzyme activity engineering.",
+        "why": "The bottleneck in directed evolution and computational prediction is no longer finding single beneficial mutations but combining them without losing the gain. Turning epistasis from noise into a modelled object directly affects the success rate of combinatorial mutant design.",
+        "evidence": "The abstract notes that MSA-based models can predict single mutations that raise activity, but that combinations frequently fail because of epistatic interactions between residues; the method here improves on that by modelling co-evolution and epistasis. The size of the improvement and the number of enzymes tested rest with the source paper.",
+        "audience": "Researchers in computational enzyme engineering, directed evolution and combinatorial mutant design",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      }
     },
     {
       "id": "retnadhas-2026-bmc-multilab",
@@ -112,7 +133,14 @@
         "SpyCatcher 组装",
         "体外概念验证"
       ],
-      "verification": "Crossref 记录、DOI、摘要及 ScienceDirect 原文页（Highlights 与 Conclusion）已核验；更正/撤稿状态未独立审计。"
+      "verification": "Crossref 记录、DOI、摘要及 ScienceDirect 原文页（Highlights 与 Conclusion）已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Five laboratories used one standardised protocol to load twelve dehydrogenases into bacterial microcompartment (BMC) shells through covalent SpyCatcher-SpyTag coupling, all of them remaining active, and achieved co-encapsulation of two enzymes plus cofactor recycling.",
+        "why": "What the multi-enzyme assembly field lacks is a reproducible general protocol rather than single success stories. Parallel multi-laboratory validation with one shared formulation demonstrates that BMC shells work as a modular assembly platform; encapsulated enzymes also gained up to roughly 50 °C in thermal stability and survived lyophilisation and re-solubilisation.",
+        "evidence": "The abstract and source page confirm that 13 of 16 candidate dehydrogenases expressed and purified, 12 coupled efficiently and all 12 were successfully encapsulated; the only enzyme inactivated by encapsulation is also inactive in free form; some encapsulated enzymes gained thermal stability up to about 50 °C and retained structure and activity after lyophilisation and re-solubilisation; two enzymes were co-encapsulated to recycle cofactor. Note that the HT1 wiffle shell is not closed at the vertices, so substrate access is unrestricted and the findings cannot be extrapolated to fully closed shells.",
+        "audience": "Researchers in multi-enzyme cascades, enzyme assembly and confined catalysis, and synthetic metabolic engineering",
+        "verification": "Crossref record, DOI, abstract and the ScienceDirect source page (Highlights and Conclusion) verified; correction/retraction status was not independently audited."
+      }
     },
     {
       "id": "stoeckle-2026-cell-enzyme-gas",
@@ -136,7 +164,14 @@
         "气体驱动",
         "概念演示"
       ],
-      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。"
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "A self-assembled hybrid material integrates the native Escherichia coli formate hydrogenlyase machinery with a programmable enzyme network: H2 and CO2 are converted into formate, which acts as a transient electron carrier to regenerate NADH through a highly stable formate dehydrogenase, giving gas-powered biocatalysis.",
+        "why": "It integrates gas supply from cell metabolism with gas-consuming enzyme networks at the materials level, offering a route to green catalysis driven by gaseous substrates (H2/CO2) without an added electron donor, and stands as a representative demonstration for cell-enzyme hybrid systems.",
+        "evidence": "The abstract confirms that the system converts H2 and CO2 into formate using the E. coli formate hydrogenlyase mechanism, then regenerates NADH with formate dehydrogenase, with a transhydrogenase also integrated. Current evidence is a materials-level concept demonstration; scale-up performance and long-term operational stability rest with the source paper.",
+        "audience": "Researchers in enzyme-material hybrid systems, gas fermentation, cofactor regeneration and biocatalysis",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      }
     },
     {
       "id": "sollid-2026-ced-ra-complexes",
@@ -160,7 +195,14 @@
         "自身免疫",
         "观点性文章"
       ],
-      "verification": "Crossref 记录、DOI 与摘要已核验；体裁按单作者观点性文章处理，更正/撤稿状态未独立审计。"
+      "verification": "Crossref 记录、DOI 与摘要已核验；体裁按单作者观点性文章处理，更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Celiac disease and rheumatoid arthritis share HLA class II genetic determinants, antibodies against post-translationally modified peptides and autoantibodies against the modifying enzymes themselves; the article proposes enzyme-substrate complexes (TG2, PAD2/4) as a unifying mechanistic view of both autoimmune diseases.",
+        "why": "It places two major autoimmune diseases inside one enzymological framework, which has framework value for understanding immunity against enzymes as self-antigens and suggests that enzyme-substrate complexes themselves may be intervention targets.",
+        "evidence": "The abstract confirms that both diseases share HLA class II associations, antibodies against deamidated or citrullinated peptides, and autoantibodies against TG2 and PAD2/4; the mechanistic model builds on recent progress in antigen-specific immune cell research. This is a perspective synthesis rather than new experimental data.",
+        "audience": "Researchers in enzyme mechanisms, autoimmune disease pathogenesis and post-translational modification",
+        "verification": "Crossref record, DOI and abstract verified; treated as a single-author perspective piece, and correction/retraction status was not independently audited."
+      }
     },
     {
       "id": "rieger-2026-squidly",
@@ -184,7 +226,14 @@
         "纯序列方法",
         "修订版本"
       ],
-      "verification": "Crossref 记录、DOI、版本关系与预印本已核验；更正/撤稿状态未独立审计。"
+      "verification": "Crossref 记录、DOI、版本关系与预印本已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Squidly combines enzyme functional hierarchy information with contrastive learning to predict catalytic residues from sequence alone, aiming to outperform BLAST-style annotation without relying on high-quality 3D structures.",
+        "why": "Catalytic residue prediction is a key step in enzyme function annotation, yet current machine-learning gold standards depend on high-quality structures and cannot be applied at scale. A sequence-only route that works would apply directly to metagenome-scale sequence collections.",
+        "evidence": "The abstract points to two limits — BLAST-based methods depend on already annotated homologues, while machine-learning gold standards depend on high-quality 3D structures — and Squidly is designed to bypass both. This entry is an eLife revised version (v3); performance benchmarks and comparisons rest with the source paper.",
+        "audience": "Researchers in enzyme function annotation, sequence-to-function prediction and metagenomic mining",
+        "verification": "Crossref record, DOI, version relationship and preprint verified; correction/retraction status was not independently audited."
+      }
     },
     {
       "id": "thevelein-2026-cellusec",
@@ -208,7 +257,14 @@
         "纤维素酶分泌",
         "真实原料验证"
       ],
-      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。"
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Cellulase secretion was engineered into an industrial lignocellulosic-ethanol Saccharomyces cerevisiae strain (Cellusec), and validated in simultaneous saccharification and fermentation (SSF) on real feedstock, targeting the commercial cellulase preparation that dominates the cost of 2G ethanol.",
+        "why": "The cost of cellulases has long been the bottleneck in second-generation ethanol, and engineering secretion into an industrial production strain rather than a laboratory strain is the key difference on the path to scale.",
+        "evidence": "The abstract confirms integration of single-copy CBHI, CBHII and EG together with three copies of BGL into an industrial 2G strain, and shows the potential to lower commercial enzyme loading in SSF experiments on real feedstock. Exact reductions and fermentation end-point metrics rest with the source paper.",
+        "audience": "Researchers in industrial biotechnology, lignocellulose conversion and yeast engineering",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      }
     },
     {
       "id": "gao-2026-dl-enzyme-review",
@@ -232,7 +288,29 @@
         "基准设计",
         "入门地图"
       ],
-      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。"
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "A review of deep learning across EC/GO annotation, substrate specificity, catalytic residue identification, kinetic parameters, thermostability, pH optima and novel enzyme mining, notable for comparing methods through benchmark design rather than simply reporting scores.",
+        "why": "Methods in this field are exploding while benchmarks are messy; a review that seriously discusses input modalities, training data and data-splitting strategies helps readers judge which conclusions hold, more than yet another new model would.",
+        "evidence": "The abstract confirms coverage of seven prediction tasks and compares representative methods by input modality, training data and splitting strategy, emphasising benchmark design over scores themselves. The full method list and conclusions rest with the source paper.",
+        "audience": "Users and evaluators of AI methods in enzymology, and researchers mining novel enzymes",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      }
     }
+  ],
+  "edition": 2,
+  "observationsEn": [
+    [
+      "Focus of this edition",
+      "AI-assisted enzyme design is moving from after-the-fact scoring to embedding the objective itself: CatESO puts substrate-aware Kcat prediction inside sequence generation, while the NAR work folds epistatic interactions into combinatorial mutation prediction. Two routes answered in the same week."
+    ],
+    [
+      "Evidence boundary",
+      "The bacterial microcompartment (BMC) encapsulation platform is currently an in vitro proof of concept: the HT1 wiffle shell is not closed at the vertices, the effect of encapsulation on activity and kinetics varies from enzyme to enzyme and cannot be generalised into \"encapsulation always improves performance\"; the gas-powered cell-enzyme hybrid material is likewise still a materials-level demonstration."
+    ],
+    [
+      "Section coverage",
+      "The \"enzyme cascade assembly\" section that was empty last edition is filled this week by a five-laboratory collaboration on BMCs; \"fusion enzymes and multifunctional enzymes\" still has no new paper strong enough to be selected, so the classic reading path carries it rather than padding with weakly related work."
+    ]
   ]
 }
