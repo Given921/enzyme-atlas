@@ -14,7 +14,11 @@
       "doi": "10.1038/251200a0",
       "en": {
         "note": "Uses an experimental system to show how gene duplication gives evolution the freedom to build new enzyme functions."
-      }
+      },
+      "topics": [
+        "酶的发现与挖掘",
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "底物特异性",
@@ -28,7 +32,10 @@
       "doi": "10.1038/nature04607",
       "en": {
         "note": "Shows how distinct substrate specificities can diverge by design from a shared enzyme scaffold."
-      }
+      },
+      "topics": [
+        "酶动力学、选择性与底物特异性"
+      ]
     },
     {
       "topic": "从头酶设计",
@@ -42,7 +49,11 @@
       "doi": "10.1038/nature06032",
       "en": {
         "note": "A landmark demonstration of selecting and evolving new enzyme activity from a non-catalytic scaffold."
-      }
+      },
+      "topics": [
+        "定向进化与理性设计",
+        "计算酶学与分子模拟"
+      ]
     },
     {
       "topic": "计算酶设计",
@@ -56,7 +67,11 @@
       "doi": "10.1038/nature06879",
       "en": {
         "note": "The landmark validation that de novo computational enzyme design can deliver experimental catalytic activity."
-      }
+      },
+      "topics": [
+        "计算酶学与分子模拟",
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "定向进化",
@@ -70,7 +85,10 @@
       "doi": "10.1038/nature09929",
       "en": {
         "note": "Establishes phage-assisted continuous evolution, turning iterative evolution into a continuous process."
-      }
+      },
+      "topics": [
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "生物催化",
@@ -84,7 +102,10 @@
       "doi": "10.1038/nature11117",
       "en": {
         "note": "Frames the biocatalysis turning point where modern protein engineering meets synthetic chemistry."
-      }
+      },
+      "topics": [
+        "酶催化方法与分析技术"
+      ]
     },
     {
       "topic": "生物催化",
@@ -98,7 +119,10 @@
       "doi": "10.1038/35051736",
       "en": {
         "note": "Sketch of a modern biocatalysis roadmap built from industrial applications and technical bottlenecks."
-      }
+      },
+      "topics": [
+        "酶催化方法与分析技术"
+      ]
     },
     {
       "topic": "结构预测",
@@ -112,7 +136,11 @@
       "doi": "10.1038/s41586-021-03819-2",
       "en": {
         "note": "Substantially changed how enzyme structures are obtained, functions annotated and engineering hypotheses generated."
-      }
+      },
+      "topics": [
+        "计算酶学与分子模拟",
+        "酶的结构与催化机制"
+      ]
     },
     {
       "topic": "从头酶设计",
@@ -126,7 +154,12 @@
       "doi": "10.1038/s41586-023-05696-3",
       "en": {
         "note": "Deep learning designs a luminescent enzyme de novo with experimentally confirmed activity."
-      }
+      },
+      "topics": [
+        "定向进化与理性设计",
+        "计算酶学与分子模拟",
+        "AI 与机器学习辅助酶研究"
+      ]
     },
     {
       "topic": "理性设计",
@@ -140,7 +173,10 @@
       "doi": "10.1126/science.6356360",
       "en": {
         "note": "An early showcase of using site-directed mutagenesis to test catalytic residues and structure-function relationships directly."
-      }
+      },
+      "topics": [
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "底物特异性",
@@ -154,7 +190,10 @@
       "doi": "10.1126/science.3838593",
       "en": {
         "note": "An early protein engineering example of structure-guided mutation shifting trypsin substrate preference."
-      }
+      },
+      "topics": [
+        "酶动力学、选择性与底物特异性"
+      ]
     },
     {
       "topic": "底物特异性",
@@ -168,7 +207,10 @@
       "doi": "10.1126/science.233.4764.659",
       "en": {
         "note": "Dissects the contributions of steric hindrance and hydrophobic contacts to enzyme-substrate recognition through engineered mutations."
-      }
+      },
+      "topics": [
+        "酶动力学、选择性与底物特异性"
+      ]
     },
     {
       "topic": "催化机制",
@@ -182,7 +224,10 @@
       "doi": "10.1126/science.7809611",
       "en": {
         "note": "Uses non-enzymatic reaction rates to quantify catalytic acceleration, becoming the classic benchmark for discussing catalytic efficiency."
-      }
+      },
+      "topics": [
+        "酶的结构与催化机制"
+      ]
     },
     {
       "topic": "计算酶设计",
@@ -196,7 +241,11 @@
       "doi": "10.1126/science.1152692",
       "en": {
         "note": "A computational route to an enzyme that catalyses a non-natural retro-aldol reaction."
-      }
+      },
+      "topics": [
+        "计算酶学与分子模拟",
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "计算酶设计",
@@ -210,7 +259,11 @@
       "doi": "10.1126/science.1190239",
       "en": {
         "note": "Shows how computational design can deliver a new stereoselective bimolecular catalytic function."
-      }
+      },
+      "topics": [
+        "计算酶学与分子模拟",
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "定向进化",
@@ -224,7 +277,10 @@
       "doi": "10.1126/science.aah6219",
       "en": {
         "note": "Directed evolution extends a natural haem protein into a carbon-silicon bond-forming enzyme."
-      }
+      },
+      "topics": [
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "RNA 酶",
@@ -238,7 +294,10 @@
       "doi": "10.1016/0092-8674(83)90117-4",
       "en": {
         "note": "Foundational evidence that RNA itself can carry out enzyme catalysis."
-      }
+      },
+      "topics": [
+        "酶的结构与催化机制"
+      ]
     },
     {
       "topic": "核糖核蛋白酶",
@@ -252,7 +311,10 @@
       "doi": "10.1016/0092-8674(87)90576-9",
       "en": {
         "note": "Reveals the telomere-extending enzyme as a ribonucleoprotein with template and primer specificity."
-      }
+      },
+      "topics": [
+        "酶的结构与催化机制"
+      ]
     },
     {
       "topic": "核糖核蛋白酶",
@@ -266,7 +328,10 @@
       "doi": "10.1016/0092-8674(89)90035-4",
       "en": {
         "note": "Confirms telomerase activity synthesising telomeric repeats in a human system."
-      }
+      },
+      "topics": [
+        "酶的结构与催化机制"
+      ]
     },
     {
       "topic": "蛋白酶结构",
@@ -280,7 +345,10 @@
       "doi": "10.1016/0092-8674(94)90303-4",
       "en": {
         "note": "Resolves the structure and catalytic mechanism of the cysteine protease ICE."
-      }
+      },
+      "topics": [
+        "酶的结构与催化机制"
+      ]
     },
     {
       "topic": "RNA 加工酶",
@@ -294,7 +362,10 @@
       "doi": "10.1016/j.cell.2008.09.013",
       "en": {
         "note": "Discovers an RNA-independent mitochondrial RNase P, reshaping understanding of this enzyme family."
-      }
+      },
+      "topics": [
+        "酶的结构与催化机制"
+      ]
     },
     {
       "topic": "信号酶",
@@ -308,7 +379,10 @@
       "doi": "10.1016/j.cell.2007.10.057",
       "en": {
         "note": "Explains structurally how the dual enzymatic activities of Ire1 couple catalysis to regulation."
-      }
+      },
+      "topics": [
+        "酶的结构与催化机制"
+      ]
     },
     {
       "topic": "变构调控",
@@ -322,7 +396,10 @@
       "doi": "10.1016/j.cell.2014.07.046",
       "en": {
         "note": "Shows a second messenger regulating metabolic enzyme function directly through an allosteric mechanism."
-      }
+      },
+      "topics": [
+        "酶的结构与催化机制"
+      ]
     },
     {
       "topic": "定向进化",
@@ -336,7 +413,10 @@
       "doi": "10.1038/nrm2805",
       "en": {
         "note": "The foundational framework for understanding how directed evolution traverses the protein sequence-function landscape."
-      }
+      },
+      "topics": [
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "定向进化",
@@ -350,7 +430,10 @@
       "doi": "10.1038/nbt1286",
       "en": {
         "note": "An industrial-grade example of using statistical modelling to identify beneficial mutations and improve catalysis."
-      }
+      },
+      "topics": [
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "酶稳定性",
@@ -364,7 +447,10 @@
       "doi": "10.1038/5232",
       "en": {
         "note": "Introduces random elongation mutagenesis and applies it to explore enzyme activity and thermostability."
-      }
+      },
+      "topics": [
+        "酶的稳定性工程"
+      ]
     },
     {
       "topic": "酶的级联组装",
@@ -378,7 +464,11 @@
       "doi": "10.1038/nbt.1557",
       "en": {
         "note": "Uses modular protein scaffolds to tune multi-enzyme ratio, spatial proximity and metabolic flux."
-      }
+      },
+      "topics": [
+        "酶的级联组装",
+        "多酶级联反应"
+      ]
     },
     {
       "topic": "酶的级联组装",
@@ -392,7 +482,11 @@
       "doi": "10.1038/nbt.3018",
       "en": {
         "note": "Quantifies how enzyme clusters accelerate intermediate processing through metabolic channelling."
-      }
+      },
+      "topics": [
+        "酶的级联组装",
+        "多酶级联反应"
+      ]
     },
     {
       "topic": "新功能酶",
@@ -406,7 +500,11 @@
       "doi": "10.1038/s41929-019-0385-5",
       "en": {
         "note": "A systematic account of engineering strategies that give natural enzyme scaffolds catalysis not found in nature."
-      }
+      },
+      "topics": [
+        "定向进化与理性设计",
+        "酶催化方法与分析技术"
+      ]
     },
     {
       "topic": "酶的级联组装",
@@ -420,7 +518,11 @@
       "doi": "10.1038/s41929-020-0433-1",
       "en": {
         "note": "Connects multi-enzyme cascade design across DNA, protein, MOF and confined environments."
-      }
+      },
+      "topics": [
+        "酶的级联组装",
+        "多酶级联反应"
+      ]
     },
     {
       "topic": "酶固定化",
@@ -434,7 +536,10 @@
       "doi": "10.1038/s41929-018-0117-2",
       "en": {
         "note": "Co-encapsulates two or three enzymes or cofactors in ZIF-8 nanoreactors to run cascades."
-      }
+      },
+      "topics": [
+        "酶固定化与酶—材料体系"
+      ]
     },
     {
       "topic": "机器学习",
@@ -448,7 +553,10 @@
       "doi": "10.1038/s41467-018-07652-6",
       "en": {
         "note": "Links enzyme structural features, turnover numbers and metabolic models through machine learning."
-      }
+      },
+      "topics": [
+        "AI 与机器学习辅助酶研究"
+      ]
     },
     {
       "topic": "机器学习",
@@ -462,7 +570,10 @@
       "doi": "10.1038/s41467-021-25976-8",
       "en": {
         "note": "Integrates evolutionary context into deep learning models for protein and enzyme engineering."
-      }
+      },
+      "topics": [
+        "AI 与机器学习辅助酶研究"
+      ]
     },
     {
       "topic": "计算酶设计",
@@ -476,7 +587,11 @@
       "doi": "10.1038/s41467-020-18619-x",
       "en": {
         "note": "Uses conformational ensemble design to reproduce the key effects of directed evolution on a Kemp eliminase."
-      }
+      },
+      "topics": [
+        "计算酶学与分子模拟",
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "酶的级联组装",
@@ -490,7 +605,11 @@
       "doi": "10.1038/s41467-019-12247-w",
       "en": {
         "note": "Builds scaffold-free multi-enzyme assemblies from short peptide interactions and improves cascade efficiency."
-      }
+      },
+      "topics": [
+        "酶的级联组装",
+        "多酶级联反应"
+      ]
     },
     {
       "topic": "多酶级联",
@@ -504,7 +623,10 @@
       "doi": "10.1038/ncomms12971",
       "en": {
         "note": "Demonstrates forward design and kinetic coordination of a ten-enzyme in vitro cascade."
-      }
+      },
+      "topics": [
+        "多酶级联反应"
+      ]
     },
     {
       "topic": "酶的级联组装",
@@ -518,7 +640,11 @@
       "doi": "10.1038/nprot.2016.139",
       "en": {
         "note": "A complete protocol for assembling, purifying and functionally validating multi-enzyme complexes on DNA nanostructures."
-      }
+      },
+      "topics": [
+        "酶的级联组装",
+        "多酶级联反应"
+      ]
     },
     {
       "topic": "酶的级联组装",
@@ -532,7 +658,11 @@
       "doi": "10.1038/nnano.2014.100",
       "en": {
         "note": "Uses DNA scaffolds and an artificial swinging arm to achieve measurable substrate channelling."
-      }
+      },
+      "topics": [
+        "酶的级联组装",
+        "多酶级联反应"
+      ]
     },
     {
       "topic": "多酶级联",
@@ -546,7 +676,10 @@
       "doi": "10.1038/nchem.2905",
       "en": {
         "note": "Reveals the physical mechanism by which substrate gradients drive chemotactic assembly of cascade enzymes."
-      }
+      },
+      "topics": [
+        "多酶级联反应"
+      ]
     },
     {
       "topic": "定向进化",
@@ -560,7 +693,10 @@
       "doi": "10.1038/s41589-024-01712-3",
       "en": {
         "note": "Improves artificial enzyme evolution by enriching for producible mutational paths."
-      }
+      },
+      "topics": [
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "定向进化",
@@ -574,7 +710,10 @@
       "doi": "10.1021/ar960017f",
       "en": {
         "note": "Establishes mutation, selection and iteration as a designable path in protein engineering."
-      }
+      },
+      "topics": [
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "机器学习",
@@ -588,7 +727,10 @@
       "doi": "10.1073/pnas.1901979116",
       "en": {
         "note": "A representative demonstration of machine learning navigating combinatorial mutation libraries."
-      }
+      },
+      "topics": [
+        "AI 与机器学习辅助酶研究"
+      ]
     },
     {
       "topic": "酶稳定性",
@@ -602,7 +744,10 @@
       "doi": "10.1016/S0958-1669(00)00229-9",
       "en": {
         "note": "Compares consensus sequence, rational design and directed evolution as thermostability strategies."
-      }
+      },
+      "topics": [
+        "酶的稳定性工程"
+      ]
     },
     {
       "topic": "酶固定化",
@@ -616,7 +761,10 @@
       "doi": "10.1016/j.enzmictec.2007.01.018",
       "en": {
         "note": "A systematic account of how immobilisation changes activity, stability and selectivity."
-      }
+      },
+      "topics": [
+        "酶固定化与酶—材料体系"
+      ]
     },
     {
       "topic": "酶固定化",
@@ -630,7 +778,10 @@
       "doi": "10.1039/C3CS60075K",
       "en": {
         "note": "A commonly used foundational primer on immobilisation classification, terminology and evaluation metrics."
-      }
+      },
+      "topics": [
+        "酶固定化与酶—材料体系"
+      ]
     },
     {
       "topic": "多酶级联",
@@ -644,7 +795,10 @@
       "doi": "10.1002/adsc.201100256",
       "en": {
         "note": "Maps the foundations of multi-enzyme cascades by reaction combination and process advantage."
-      }
+      },
+      "topics": [
+        "多酶级联反应"
+      ]
     },
     {
       "topic": "多酶级联",
@@ -658,7 +812,10 @@
       "doi": "10.1111/1751-7915.12386",
       "en": {
         "note": "Unifies functional coupling and spatial organisation into one cascade design framework."
-      }
+      },
+      "topics": [
+        "多酶级联反应"
+      ]
     },
     {
       "topic": "酶的级联组装",
@@ -672,7 +829,11 @@
       "doi": "10.1093/nar/gkr888",
       "en": {
         "note": "Uses DNA scaffolds to organise enzymes spatially and raise biosynthetic efficiency."
-      }
+      },
+      "topics": [
+        "酶的级联组装",
+        "多酶级联反应"
+      ]
     },
     {
       "topic": "底物特异性",
@@ -686,7 +847,10 @@
       "doi": "10.1146/annurev-biochem-030409-143718",
       "en": {
         "note": "The core framework for understanding catalytic promiscuity, substrate tolerance and new function evolution."
-      }
+      },
+      "topics": [
+        "酶动力学、选择性与底物特异性"
+      ]
     },
     {
       "topic": "底物特异性",
@@ -700,7 +864,10 @@
       "doi": "10.1016/j.tibtech.2007.03.002",
       "en": {
         "note": "A classic entry point linking enzyme multifunctionality mechanisms to biocatalytic applications."
-      }
+      },
+      "topics": [
+        "酶动力学、选择性与底物特异性"
+      ]
     },
     {
       "topic": "辅因子再生",
@@ -714,7 +881,10 @@
       "doi": "10.1016/j.copbio.2003.09.007",
       "en": {
         "note": "A foundational review of cofactor recycling schemes in preparative biocatalysis."
-      }
+      },
+      "topics": [
+        "辅因子、辅酶与再生"
+      ]
     },
     {
       "topic": "辅因子再生",
@@ -728,7 +898,10 @@
       "doi": "10.1039/D0NP00004C",
       "en": {
         "note": "Systematically compares natural cofactors, analogues and their enzymatic regeneration strategies."
-      }
+      },
+      "topics": [
+        "辅因子、辅酶与再生"
+      ]
     },
     {
       "topic": "融合酶",
@@ -742,7 +915,10 @@
       "doi": "10.1002/cbic.201800394",
       "en": {
         "note": "Compares fusion enzyme design around linkers, domain order and cofactor coupling."
-      }
+      },
+      "topics": [
+        "融合酶与多功能酶"
+      ]
     },
     {
       "topic": "融合酶",
@@ -756,7 +932,10 @@
       "doi": "10.1016/j.biotechadv.2022.108016",
       "en": {
         "note": "Summarises design variables, cascade applications and common failure modes of genetically fused multifunctional enzymes."
-      }
+      },
+      "topics": [
+        "融合酶与多功能酶"
+      ]
     },
     {
       "topic": "融合酶",
@@ -770,7 +949,10 @@
       "doi": "10.1016/bs.mie.2025.01.013",
       "en": {
         "note": "Provides hands-on workflows for fusion direction, linker libraries, Gibson assembly and site-directed mutagenesis."
-      }
+      },
+      "topics": [
+        "融合酶与多功能酶"
+      ]
     },
     {
       "topic": "结构酶学",
@@ -784,7 +966,10 @@
       "doi": "10.1038/206757a0",
       "en": {
         "note": "The first near-atomic view of an enzyme's three-dimensional structure, laying the basis for explaining catalysis from structure."
-      }
+      },
+      "topics": [
+        "酶的结构与催化机制"
+      ]
     },
     {
       "topic": "定向进化",
@@ -798,7 +983,10 @@
       "doi": "10.1038/370389a0",
       "en": {
         "note": "Establishes DNA shuffling, recombining beneficial mutations into an iterable in vitro protein evolution route."
-      }
+      },
+      "topics": [
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "塑料降解",
@@ -812,7 +1000,10 @@
       "doi": "10.1038/s41586-020-2149-4",
       "en": {
         "note": "Advances an engineered PET depolymerase to high conversion and closed-loop recycling validation."
-      }
+      },
+      "topics": [
+        "酶的应用与环境生物催化"
+      ]
     },
     {
       "topic": "机器学习与酶工程",
@@ -826,7 +1017,11 @@
       "doi": "10.1038/s41586-022-04599-z",
       "en": {
         "note": "Machine-learning-assisted screening of stabilising mutations produces FAST-PETase, a highly efficient PET hydrolase."
-      }
+      },
+      "topics": [
+        "AI 与机器学习辅助酶研究",
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "核酸酶",
@@ -840,7 +1035,11 @@
       "doi": "10.1126/science.1225829",
       "en": {
         "note": "Reconstitutes an RNA-guided Cas9 DNA cleavage system, establishing the core mechanism of programmable nucleases."
-      }
+      },
+      "topics": [
+        "酶的结构与催化机制",
+        "酶催化方法与分析技术"
+      ]
     },
     {
       "topic": "非天然催化",
@@ -854,7 +1053,11 @@
       "doi": "10.1126/science.1231434",
       "en": {
         "note": "Shows engineered P450s catalysing carbene transfer and olefin cyclopropanation beyond natural metabolism."
-      }
+      },
+      "topics": [
+        "酶催化方法与分析技术",
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "结构酶学",
@@ -868,7 +1071,10 @@
       "doi": "10.1126/science.1247997",
       "en": {
         "note": "Structural comparison reveals how guide RNA drives Cas9 conformational activation and target DNA recognition."
-      }
+      },
+      "topics": [
+        "酶的结构与催化机制"
+      ]
     },
     {
       "topic": "非天然催化",
@@ -882,7 +1088,11 @@
       "doi": "10.1126/science.aar4239",
       "en": {
         "note": "Uses evolved haem enzymes to build strained carbon rings, widening the chemical space accessible to biocatalysis."
-      }
+      },
+      "topics": [
+        "酶催化方法与分析技术",
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "结构酶学",
@@ -896,7 +1106,10 @@
       "doi": "10.1016/j.cell.2014.02.001",
       "en": {
         "note": "Resolves the Cas9-guide RNA-target DNA ternary complex, providing a structural framework for mechanism and nuclease engineering."
-      }
+      },
+      "topics": [
+        "酶的结构与催化机制"
+      ]
     },
     {
       "topic": "定向进化",
@@ -910,7 +1123,10 @@
       "doi": "10.1038/nbt0496-458",
       "en": {
         "note": "Shows that rounds of random mutation and selection accumulate small-effect mutations improving catalysis in water-organic solvent mixtures."
-      }
+      },
+      "topics": [
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "定向进化",
@@ -924,7 +1140,10 @@
       "doi": "10.1038/7939",
       "en": {
         "note": "Uses a fungal peroxidase to show secretory expression, stability and industrial-condition fitness improving together through experimental evolution."
-      }
+      },
+      "topics": [
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "底物特异性",
@@ -938,7 +1157,10 @@
       "doi": "10.1038/73773",
       "en": {
         "note": "Directed evolution inverts hydrolase enantioselectivity and validates the production gain in a three-enzyme whole-cell route."
-      }
+      },
+      "topics": [
+        "酶动力学、选择性与底物特异性"
+      ]
     },
     {
       "topic": "稳定性工程",
@@ -952,7 +1174,10 @@
       "doi": "10.1038/10910",
       "en": {
         "note": "Treats surface chemistry as the object of evolution, raising a reporter enzyme's tolerance to tissue fixative inactivation."
-      }
+      },
+      "topics": [
+        "酶的稳定性工程"
+      ]
     },
     {
       "topic": "底物特异性",
@@ -966,7 +1191,10 @@
       "doi": "10.1038/nbt974",
       "en": {
         "note": "Evolves a broad-spectrum DNA polymerase able to process several non-natural nucleotides and damaged templates."
-      }
+      },
+      "topics": [
+        "酶动力学、选择性与底物特异性"
+      ]
     },
     {
       "topic": "计算酶设计",
@@ -980,7 +1208,11 @@
       "doi": "10.1038/nchembio.1276",
       "en": {
         "note": "Tracks active-site remodelling during evolution of a computationally designed retro-aldolase, linking de novo design to experimental optimisation."
-      }
+      },
+      "topics": [
+        "计算酶学与分子模拟",
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "从头酶设计",
@@ -994,7 +1226,11 @@
       "doi": "10.1038/nchembio.1138",
       "en": {
         "note": "Resolves an RNA ligase obtained by in vitro evolution from a non-catalytic scaffold, revealing the structural and dynamic basis of a new catalytic fold."
-      }
+      },
+      "topics": [
+        "定向进化与理性设计",
+        "计算酶学与分子模拟"
+      ]
     },
     {
       "topic": "酶的进化",
@@ -1008,7 +1244,11 @@
       "doi": "10.1038/s41589-018-0043-2",
       "en": {
         "note": "Reconstructs evolutionary intermediates between an ancestral binding protein and a dehydratase, dissecting the molecular steps that create new catalysis."
-      }
+      },
+      "topics": [
+        "酶的发现与挖掘",
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "从头酶设计",
@@ -1022,7 +1262,11 @@
       "doi": "10.1038/nchem.2596",
       "en": {
         "note": "Reveals how an artificial aldolase evolves a cooperative catalytic tetrad, explaining the stepwise build-up of high activity."
-      }
+      },
+      "topics": [
+        "定向进化与理性设计",
+        "计算酶学与分子模拟"
+      ]
     },
     {
       "topic": "机器学习与酶工程",
@@ -1036,7 +1280,11 @@
       "doi": "10.1038/s41592-021-01100-y",
       "en": {
         "note": "Proposes a protein engineering route combining pretrained sequence representations with small experimental datasets to cut sample requirements."
-      }
+      },
+      "topics": [
+        "AI 与机器学习辅助酶研究",
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "定向进化",
@@ -1050,7 +1298,10 @@
       "doi": "10.1073/pnas.90.12.5618",
       "en": {
         "note": "Continuous random mutagenesis adapts subtilisin to high DMF concentrations, a foundational case in directed enzyme evolution."
-      }
+      },
+      "topics": [
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "定向进化",
@@ -1064,7 +1315,10 @@
       "doi": "10.1073/pnas.91.22.10747",
       "en": {
         "note": "Provides the experimental DNA shuffling method of random fragmentation and reassembly, founding family-recombination strategies."
-      }
+      },
+      "topics": [
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "溶剂耐受性",
@@ -1078,7 +1332,11 @@
       "doi": "10.1093/protein/9.1.77",
       "en": {
         "note": "Evolves subtilisin in its natural host to strengthen total activity in DMF-containing systems."
-      }
+      },
+      "topics": [
+        "酶的稳定性工程",
+        "酶动力学、选择性与底物特异性"
+      ]
     },
     {
       "topic": "热稳定性工程",
@@ -1092,7 +1350,10 @@
       "doi": "10.1093/protein/12.1.47",
       "en": {
         "note": "Multiple rounds of evolution push a mesophilic protease towards the performance of natural thermophilic enzymes."
-      }
+      },
+      "topics": [
+        "酶的稳定性工程"
+      ]
     },
     {
       "topic": "酶的进化",
@@ -1106,7 +1367,11 @@
       "doi": "10.1016/S1074-5521(99)80033-7",
       "en": {
         "note": "Links catalytic promiscuity to the evolution of new enzyme activities, forming a classic framework for functional innovation."
-      }
+      },
+      "topics": [
+        "酶的发现与挖掘",
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "稳定性工程",
@@ -1120,7 +1385,10 @@
       "doi": "10.1073/pnas.0510098103",
       "en": {
         "note": "Shows experimentally that extra stability buffers deleterious mutations, expanding the sequence space a protein can explore."
-      }
+      },
+      "topics": [
+        "酶的稳定性工程"
+      ]
     },
     {
       "topic": "计算酶设计",
@@ -1134,7 +1402,11 @@
       "doi": "10.1073/pnas.1118082108",
       "en": {
         "note": "Iterates design, experimental structure and redesign to improve agreement between computational enzyme design and measured performance."
-      }
+      },
+      "topics": [
+        "计算酶学与分子模拟",
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "计算酶设计",
@@ -1148,7 +1420,11 @@
       "doi": "10.1002/anie.201204077",
       "en": {
         "note": "A systematic account of the design chain from transition-state modelling and active-site placement to sequence optimisation and experimental evolution."
-      }
+      },
+      "topics": [
+        "计算酶学与分子模拟",
+        "定向进化与理性设计"
+      ]
     },
     {
       "topic": "多酶级联",
@@ -1162,7 +1438,10 @@
       "doi": "10.1021/acs.chemrev.7b00033",
       "en": {
         "note": "Establishes a systematic taxonomy of artificial linear biocatalytic cascades covering whole enzymes, chemo-enzymatic coupling and spatial organisation."
-      }
+      },
+      "topics": [
+        "多酶级联反应"
+      ]
     }
   ]
 }

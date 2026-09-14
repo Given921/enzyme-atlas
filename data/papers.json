@@ -47,7 +47,10 @@
         "evidence": "The abstract states that the platform takes plain-English intuition-driven requests through a web interface, uses LLM agents to elicit missing information, builds physics-based models, configures and runs high-throughput molecular modelling, and converts the results into actionable designs such as smart mutation libraries; validation covers two tasks, engineering a halide methyltransferase toward bulkier substrates and a bidomain amylase for higher activity at lower temperature. The size of the improvements and larger-scale validation rest with the source paper.",
         "audience": "Researchers in AI enzyme design, computational enzymology and enzyme engineering workflows",
         "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
-      }
+      },
+      "topics": [
+        "AI 与机器学习辅助酶研究"
+      ]
     },
     {
       "id": "zhou-2026-ultrasound-cof",
@@ -78,7 +81,10 @@
         "evidence": "The abstract confirms that ultrasound simultaneously drives enzymes into open conformations and promotes aqueous COF crystallization, with the framework growing around and locking the activated state before relaxation; across six frameworks with varied pore sizes and chemistries, effective locking requires both tight steric confinement and abundant nonbonded interactions; the optimal framework raised horseradish peroxidase activity 3.4-fold, mainly through a reduced Michaelis constant, while retaining >70% activity over 10 catalytic cycles; MD identifies the captured species as a globally reorganized open state. Conclusions rest on a model enzyme, and transfer to other enzymes rests with the source paper.",
         "audience": "Researchers in enzyme immobilization, enzyme-material interfaces and biocatalytic process intensification",
         "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
-      }
+      },
+      "topics": [
+        "酶固定化与酶—材料体系"
+      ]
     },
     {
       "id": "onishchenko-2026-robots-physics-ml",
@@ -109,7 +115,10 @@
         "evidence": "The abstract confirms that robots curate structurally diverse active and inactive substrates, the model uses only a few features to learn the balance between steric and electronic factors and remains useful on small datasets, retains predictive power on external enzyme families, and shows improved out-of-distribution performance over descriptor-heavy state-of-the-art ML. Concrete substrate counts, enzyme families and accuracy rest with the source paper.",
         "audience": "Researchers in substrate-scope prediction, computational enzymology, and automated experimentation with machine learning",
         "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
-      }
+      },
+      "topics": [
+        "酶动力学、选择性与底物特异性"
+      ]
     },
     {
       "id": "wang-2026-gatv2-ecr",
@@ -140,7 +149,10 @@
         "evidence": "The abstract gives explicit benchmarks: within a 63259-sequence enzyme pool, evaluated on 50 structurally isolated reactions, the strongest fingerprint baseline achieves R@10 = 0.020, while GATv2-ECR reaches R@10 = 0.160 on isolated queries and R@10 = 0.308 on an out-of-distribution subset (n = 39). This entry is a computational benchmark and includes no wet-lab enzyme activity validation.",
         "audience": "Researchers in enzyme mining, biocatalytic retrosynthesis and sequence-to-function prediction",
         "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
-      }
+      },
+      "topics": [
+        "AI 与机器学习辅助酶研究"
+      ]
     },
     {
       "id": "wu-2026-f-amine-dehydrogenase",
@@ -171,7 +183,10 @@
         "evidence": "The abstract confirms that combining CAST and FRISM yielded the quintuple mutant M3-1 (V144G/L306V/V309G/Q308A/T124A) with a 56.6-fold increase in kcat/Km toward 4IBO; preparative-scale biosynthesis used a substrate fed-batch strategy, converting 109.6 mM 4IBO effectively (the abstract reports 91.7% conversion; isolated yield, enantiomeric excess and recycle runs rest with the source paper).",
         "audience": "Researchers in biocatalysis, chiral amine synthesis, and directed evolution with process scale-up",
         "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
-      }
+      },
+      "topics": [
+        "定向进化与理性设计"
+      ]
     },
     {
       "id": "wu-2026-arginine-upo-cof",
@@ -202,7 +217,10 @@
         "evidence": "The abstract confirms that β-ketoester groups react with surface arginine residues under mild aqueous conditions to form a robust covalent linkage without external activators or toxic cross-linkers; relative to physical adsorption and lysine-directed epoxy coupling, the arginine-directed strategy offers higher enzyme loading, reduced leaching and better reusability, and raises kcat/KM toward ABTS oxidation 1.8-fold; spectroscopy and MD indicate the strategy rigidifies the enzyme and biases heme-channel orientation. Batch stability and cycle counts rest with the source paper.",
         "audience": "Researchers in enzyme immobilization, enzyme-material interfaces and biohybrid materials",
         "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
-      }
+      },
+      "topics": [
+        "酶固定化与酶—材料体系"
+      ]
     },
     {
       "id": "zhang-2026-bvdod-qmmm",
@@ -232,7 +250,10 @@
         "evidence": "The abstract confirms that L-DOPA binds in a monodentate mode, two low-spin states (open-shell singlet and triplet) correspond to activated O2; the Fe(III)-superoxo first undergoes σ-addition to C4 of L-DOPA, then PCET drives O-O cleavage with the uncoordinated phenolic hydroxyl promoting O-O scission; the spin state then crosses to the quintet, and lactone formation and ring opening are computationally easy; the open-shell singlet barrier of 24.7 kcal/mol is close to the experimental free-energy barrier of about 23.8 kcal/mol. This entry is purely computational with no new wet-lab data.",
         "audience": "Researchers in enzyme reaction mechanisms, nonheme iron enzymes, and computational enzymology with QM/MM",
         "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
-      }
+      },
+      "topics": [
+        "计算酶学与分子模拟"
+      ]
     }
   ],
   "observationsEn": [

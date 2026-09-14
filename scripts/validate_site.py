@@ -114,12 +114,34 @@ def parse_pairs(body: str) -> dict:
 assert set(vocab_blocks) >= {"topics", "classicTopics", "sourceGroups", "kinds", "types", "labels"}, f"i18n vocabularies incomplete: {sorted(vocab_blocks)}"
 vocab = {name: parse_pairs(body) for name, body in vocab_blocks.items()}
 assert len(vocab["labels"]) >= 40, "label vocabulary is suspiciously small"
-for value in {paper_item["topic"] for paper_item in items} | {paper_item["topic"] for paper_item in json.loads((ROOT / "data" / "history" / "papers-2026-08-31.json").read_text(encoding="utf-8"))["items"]} | set(re.findall(r"const topics = \[(.*?)\];", (ROOT / "topics.html").read_text(encoding="utf-8"), re.DOTALL)[0].replace("'", "").split(",")):
+for value in {paper_item["topic"] for paper_item in items} | {paper_item["topic"] for paper_item in json.loads((ROOT / "data" / "history" / "papers-2026-08-31.json").read_text(encoding="utf-8"))["items"]}:
     assert value.strip() in vocab["topics"], f"topic without English translation: {value.strip()}"
 for classic in classics:
     assert classic["topic"] in vocab["classicTopics"], f"classic topic without English translation: {classic['topic']}"
     assert classic["sourceGroup"] in vocab["sourceGroups"], f"source group without English translation: {classic['sourceGroup']}"
     assert classic["kind"] in vocab["kinds"], f"kind without English translation: {classic['kind']}"
+    assert classic.get("topics"), f"classic record missing unified topics: {classic['title']}"
+    for unified in classic["topics"]:
+        assert unified in vocab["topics"], f"classic unified topic without English translation: {unified}"
+
+# ---- unified research topics -----------------------------------------------
+topics_data = json.loads((ROOT / "data" / "topics.json").read_text(encoding="utf-8"))
+assert topics_data.get("topics"), "data/topics.json is missing its topic list"
+topic_keys = [t["key"] for t in topics_data["topics"]]
+assert len(topic_keys) == len(set(topic_keys)), "duplicate topic keys in data/topics.json"
+for t in topics_data["topics"]:
+    assert t["key"] in vocab["topics"], f"topics.json key without English translation: {t['key']}"
+    assert t.get("en"), f"topics.json topic missing English name: {t['key']}"
+    assert t.get("description") and t.get("en_description"), f"topics.json topic missing description: {t['key']}"
+    assert t.get("total") == t.get("classicCount", 0) + t.get("paperCount", 0), f"topics.json count mismatch: {t['key']}"
+assert set(topic_keys) >= set(vocab["topics"].keys()), "topics.json is missing topics present in the i18n vocabulary"
+# every record's unified topics must resolve into topics.json keys
+for classic in classics:
+    for unified in classic["topics"]:
+        assert unified in topic_keys, f"classic topic not in topics.json: {unified}"
+for paper_item in items:
+    for unified in (paper_item.get("topics") or []):
+        assert unified in topic_keys, f"paper topic not in topics.json: {unified}"
 for paper_item in items:
     for label in paper_item["labels"]:
         assert label in vocab["labels"], f"label without English translation: {label}"
@@ -149,8 +171,14 @@ for required in ("fetch('data/editions.json')", "archive.html?e=", "EA.paperTitl
     assert required in archive_js, f"archive page missing {required}"
 for required in ("editionSwitcher", "archiveDetail", "subpage-hero", "site-footer", "data-lang-slot"):
     assert required in archive_html, f"archive page missing {required}"
+topics_html = (ROOT / "topics.html").read_text(encoding="utf-8")
+topics_js = (ROOT / "topics.js").read_text(encoding="utf-8")
+for required in ("topicsBrowser", "topics.js", "subpage-hero", "site-footer", "data-lang-slot"):
+    assert required in topics_html, f"topics page missing {required}"
+for required in ("fetch('data/topics.json')", "fetch('data/classics.json')", "fetch('data/editions.json')", "topic-card", "EA.paperTitle", "EA.v('topics'", "EA.onChange"):
+    assert required in topics_js, f"topics runtime missing {required}"
 styles = (ROOT / "styles.css").read_text(encoding="utf-8")
-for required in ("--ink: #0d0d0d", "--paper: #f7f7f5", ".intent-strip", ".site-footer", "height: 153px", ".lang-switch", ".edition-card", ".edition-grid"):
+for required in ("--ink: #0d0d0d", "--paper: #f7f7f5", ".intent-strip", ".site-footer", "height: 153px", ".lang-switch", ".edition-card", ".edition-grid", ".topic-card", ".topic-card-body", ".topic-item"):
     assert required in styles, f"missing design contract: {required}"
 for page in ("search.html", "classics.html", "topics.html", "archive.html"):
     html = (ROOT / page).read_text(encoding="utf-8")

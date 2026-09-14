@@ -47,7 +47,10 @@
         "evidence": "The abstract states explicitly that existing deep-learning Kcat models are usually applied for scoring or filtering after sequences are generated, which disconnects the kinetic objective from design; CatESO bridges that gap through differentiable optimisation. Concrete benchmark numbers and the scale of experimental validation rest with the source paper; the abstract reports no wet-lab expression or activity data.",
         "audience": "Researchers in AI enzyme design, enzyme kinetics prediction and computationally assisted directed evolution",
         "verification": "Crossref record, DOI and abstract verified; the scale of wet-lab validation rests with the source paper, and correction/retraction status was not independently audited."
-      }
+      },
+      "topics": [
+        "AI 与机器学习辅助酶研究"
+      ]
     },
     {
       "id": "hurrell-2026-tunb-ccb",
@@ -78,7 +81,10 @@
         "evidence": "The abstract confirms that TunB catalyses intermolecular C–C bond formation from chorismate without a cofactor and that sequence analysis failed to predict this substrate; structural and kinetic details of the mechanism rest with the source paper. A ChemRxiv preprint precedes it (10.26434/chemrxiv.15002986/v1).",
         "audience": "Researchers in enzyme mechanisms, natural product biosynthesis and biocatalytic C–C bond construction",
         "verification": "Crossref record, DOI, abstract and the preprint relationship verified; correction/retraction status was not independently audited."
-      }
+      },
+      "topics": [
+        "酶的发现与挖掘"
+      ]
     },
     {
       "id": "kim-2026-coevolution-epistasis",
@@ -109,7 +115,10 @@
         "evidence": "The abstract notes that MSA-based models can predict single mutations that raise activity, but that combinations frequently fail because of epistatic interactions between residues; the method here improves on that by modelling co-evolution and epistasis. The size of the improvement and the number of enzymes tested rest with the source paper.",
         "audience": "Researchers in computational enzyme engineering, directed evolution and combinatorial mutant design",
         "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
-      }
+      },
+      "topics": [
+        "AI 与机器学习辅助酶研究"
+      ]
     },
     {
       "id": "retnadhas-2026-bmc-multilab",
@@ -140,7 +149,10 @@
         "evidence": "The abstract and source page confirm that 13 of 16 candidate dehydrogenases expressed and purified, 12 coupled efficiently and all 12 were successfully encapsulated; the only enzyme inactivated by encapsulation is also inactive in free form; some encapsulated enzymes gained thermal stability up to about 50 °C and retained structure and activity after lyophilisation and re-solubilisation; two enzymes were co-encapsulated to recycle cofactor. Note that the HT1 wiffle shell is not closed at the vertices, so substrate access is unrestricted and the findings cannot be extrapolated to fully closed shells.",
         "audience": "Researchers in multi-enzyme cascades, enzyme assembly and confined catalysis, and synthetic metabolic engineering",
         "verification": "Crossref record, DOI, abstract and the ScienceDirect source page (Highlights and Conclusion) verified; correction/retraction status was not independently audited."
-      }
+      },
+      "topics": [
+        "酶的级联组装"
+      ]
     },
     {
       "id": "stoeckle-2026-cell-enzyme-gas",
@@ -171,7 +183,10 @@
         "evidence": "The abstract confirms that the system converts H2 and CO2 into formate using the E. coli formate hydrogenlyase mechanism, then regenerates NADH with formate dehydrogenase, with a transhydrogenase also integrated. Current evidence is a materials-level concept demonstration; scale-up performance and long-term operational stability rest with the source paper.",
         "audience": "Researchers in enzyme-material hybrid systems, gas fermentation, cofactor regeneration and biocatalysis",
         "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
-      }
+      },
+      "topics": [
+        "酶固定化与酶—材料体系"
+      ]
     },
     {
       "id": "sollid-2026-ced-ra-complexes",
@@ -202,7 +217,10 @@
         "evidence": "The abstract confirms that both diseases share HLA class II associations, antibodies against deamidated or citrullinated peptides, and autoantibodies against TG2 and PAD2/4; the mechanistic model builds on recent progress in antigen-specific immune cell research. This is a perspective synthesis rather than new experimental data.",
         "audience": "Researchers in enzyme mechanisms, autoimmune disease pathogenesis and post-translational modification",
         "verification": "Crossref record, DOI and abstract verified; treated as a single-author perspective piece, and correction/retraction status was not independently audited."
-      }
+      },
+      "topics": [
+        "酶的结构与催化机制"
+      ]
     },
     {
       "id": "rieger-2026-squidly",
@@ -233,7 +251,10 @@
         "evidence": "The abstract points to two limits — BLAST-based methods depend on already annotated homologues, while machine-learning gold standards depend on high-quality 3D structures — and Squidly is designed to bypass both. This entry is an eLife revised version (v3); performance benchmarks and comparisons rest with the source paper.",
         "audience": "Researchers in enzyme function annotation, sequence-to-function prediction and metagenomic mining",
         "verification": "Crossref record, DOI, version relationship and preprint verified; correction/retraction status was not independently audited."
-      }
+      },
+      "topics": [
+        "AI 与机器学习辅助酶研究"
+      ]
     },
     {
       "id": "thevelein-2026-cellusec",
@@ -264,7 +285,10 @@
         "evidence": "The abstract confirms integration of single-copy CBHI, CBHII and EG together with three copies of BGL into an industrial 2G strain, and shows the potential to lower commercial enzyme loading in SSF experiments on real feedstock. Exact reductions and fermentation end-point metrics rest with the source paper.",
         "audience": "Researchers in industrial biotechnology, lignocellulose conversion and yeast engineering",
         "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
-      }
+      },
+      "topics": [
+        "定向进化与理性设计"
+      ]
     },
     {
       "id": "gao-2026-dl-enzyme-review",
@@ -295,7 +319,10 @@
         "evidence": "The abstract confirms coverage of seven prediction tasks and compares representative methods by input modality, training data and splitting strategy, emphasising benchmark design over scores themselves. The full method list and conclusions rest with the source paper.",
         "audience": "Users and evaluators of AI methods in enzymology, and researchers mining novel enzymes",
         "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
-      }
+      },
+      "topics": [
+        "AI 与机器学习辅助酶研究"
+      ]
     }
   ],
   "edition": 2,

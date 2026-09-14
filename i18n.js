@@ -153,6 +153,11 @@
       topics_title: '研究专题',
       topics_desc: '专题用于系统理解一个方向和进入阅读路径，不作为首页的重复筛选器。平台仍按公共领域价值进行每周推荐。',
       topics_purpose: '如果你已有具体酶名、EC 号、反应或 DOI，请直接使用顶部搜索。若你想建立一个方向的整体认识，从下面的专题入口开始。',
+      topics_coverage: '每个专题汇集经典论文与本周/往期新论文；一篇文献可归入多个专题，但不会勉强归类。',
+      topics_classics: '经典论文',
+      topics_weekly: '本周与往期新论文',
+      topics_empty: '该专题暂无文献。',
+      topics_error: '研究专题载入失败，请稍后重试。',
 
       /* ---------- search page ---------- */
       search_eyebrow: 'KNOWN-ITEM LOOKUP',
@@ -362,6 +367,11 @@
       topics_title: 'Research topics',
       topics_desc: 'Topics help you understand a direction and start a reading path; they are not a duplicate filter of the homepage. Weekly recommendations still follow public value.',
       topics_purpose: 'If you already have a specific enzyme, EC number, reaction or DOI, use the search at the top. To build an overall picture of a direction, start from the topics below.',
+      topics_coverage: 'Each topic gathers classics and current/past weekly papers; a paper can belong to several topics, but is never forced into one.',
+      topics_classics: 'Classics',
+      topics_weekly: 'Current & past weekly papers',
+      topics_empty: 'No papers under this topic yet.',
+      topics_error: 'Failed to load topics; please try again later.',
 
       search_eyebrow: 'KNOWN-ITEM LOOKUP',
       search_title: 'Search the literature',
@@ -455,6 +465,8 @@
       '多酶级联反应': 'Multi-enzyme cascades',
       '融合酶与多功能酶': 'Fusion enzymes & multifunctional enzymes',
       '计算酶学与分子模拟': 'Computational enzymology & molecular simulation',
+      '辅因子、辅酶与再生': 'Cofactors, coenzymes & regeneration',
+      '酶的应用与环境生物催化': 'Enzyme applications & environmental biocatalysis',
     },
     classicTopics: {
       'RNA 加工酶': 'RNA-processing enzymes',
