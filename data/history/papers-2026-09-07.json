@@ -1,0 +1,316 @@
+{
+  "updatedAt": "2026-09-07",
+  "periodStart": "2026-08-31",
+  "periodEnd": "2026-09-07",
+  "source": "curated_crossref_and_publisher",
+  "observations": [
+    [
+      "本期重点",
+      "AI 辅助酶设计正在从“事后打分”走向“目标内嵌”：CatESO 把底物感知的 Kcat 预测直接嵌入序列生成过程，NAR 的工作则把上位性相互作用纳入组合突变预测，两条路线在同一周给出答案。"
+    ],
+    [
+      "证据边界",
+      "细菌微区室（BMC）封装平台目前是体外概念验证，所用 HT1 wiffle 壳在顶点处未封闭，封装对活性和动力学的影响因酶而异，不能外推为“封装必然增效”；气体驱动细胞-酶杂化材料同样处于材料级演示阶段。"
+    ],
+    [
+      "栏目覆盖",
+      "上一期空缺的“酶的级联组装”栏目本期由一项五实验室合作的 BMC 研究补上；“融合酶与多功能酶”栏目本期仍无足够强的新论文入选，继续由经典阅读路线承接，不用弱相关论文填充。"
+    ]
+  ],
+  "items": [
+    {
+      "id": "gan-2026-cateso",
+      "title": "CatESO: Differentiable Enzyme Sequence Optimization Guided by Substrate-Aware Kcat Prediction",
+      "cn": "CatESO：由底物感知 Kcat 预测引导的可微分酶序列优化",
+      "authors": "Gan et al.",
+      "journal": "Journal of the American Chemical Society",
+      "date": "2026-09-04",
+      "topic": "AI 与机器学习辅助酶研究",
+      "type": "original",
+      "doi": "10.1021/jacs.6c14365",
+      "url": "https://doi.org/10.1021/jacs.6c14365",
+      "featured": true,
+      "summary": "CatESO 把底物感知的 Kcat 预测做成可微分模块，直接嵌入酶序列生成过程，使“提高催化周转数”成为设计目标本身，而不是生成之后的筛选标准。",
+      "why": "它针对的是酶设计里最硬的两难：实测速率常数稀缺、序列空间巨大。把动力学目标与序列生成合并为同一个可微优化问题，是 AI 酶工程从“打分筛选”走向“目标驱动设计”的标志性一步。",
+      "evidence": "摘要明确指出：现有深度学习 Kcat 模型通常在序列生成之后才用于打分或过滤，导致动力学目标与设计脱节；CatESO 通过可微分优化弥合这一鸿沟。具体基准数值与实验验证规模以原文为准，摘要未给出湿实验表达与活性数据。",
+      "audience": "AI 酶设计、酶动力学预测、计算辅助定向进化研究者",
+      "minutes": 10,
+      "labels": [
+        "目标驱动设计",
+        "Kcat 预测",
+        "可微优化"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；湿实验验证规模以原文为准，更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "CatESO turns substrate-aware Kcat prediction into a differentiable module embedded directly in enzyme sequence generation, so that raising the catalytic turnover number becomes the design objective itself rather than a filter applied afterwards.",
+        "why": "It attacks the hardest trade-off in enzyme design: measured rate constants are scarce and sequence space is vast. Folding a kinetic objective and sequence generation into one differentiable optimisation problem is a signature step from score-and-filter towards objective-driven design in AI enzyme engineering.",
+        "evidence": "The abstract states explicitly that existing deep-learning Kcat models are usually applied for scoring or filtering after sequences are generated, which disconnects the kinetic objective from design; CatESO bridges that gap through differentiable optimisation. Concrete benchmark numbers and the scale of experimental validation rest with the source paper; the abstract reports no wet-lab expression or activity data.",
+        "audience": "Researchers in AI enzyme design, enzyme kinetics prediction and computationally assisted directed evolution",
+        "verification": "Crossref record, DOI and abstract verified; the scale of wet-lab validation rests with the source paper, and correction/retraction status was not independently audited."
+      }
+    },
+    {
+      "id": "hurrell-2026-tunb-ccb",
+      "title": "Intermolecular Carbon–Carbon Bond Formation by a Chorismate-Converting Enzyme",
+      "cn": "一种转化分支酸的酶催化分子间碳—碳键形成",
+      "authors": "Hurrell et al.",
+      "journal": "Journal of the American Chemical Society",
+      "date": "2026-09-04",
+      "topic": "酶的发现与挖掘",
+      "type": "original",
+      "doi": "10.1021/jacs.6c09780",
+      "url": "https://doi.org/10.1021/jacs.6c09780",
+      "featured": true,
+      "summary": "研究鉴定出酶 TunB：无需任何辅因子即可催化分支酸的分子间碳—碳键形成，参与甲烷氧化菌天然产物 tundrenone 的生物合成，且从序列上无法预测其以分支酸为底物。",
+      "why": "分支酸是众多代谢物的重要前体，但已知分支酸化学的反应类型有限。一个无辅因子的分子间 C–C 键形成酶直接拓宽了分支酸生物催化的工具箱，也提醒人们：仅靠序列相似性会漏掉这类新反应。",
+      "evidence": "摘要确认 TunB 在无辅因子条件下催化分支酸分子间 C–C 键形成，且序列分析未能预测该底物；反应机理的结构与动力学细节以原文为准。该工作有 ChemRxiv 预印本在先（10.26434/chemrxiv.15002986/v1）。",
+      "audience": "酶学机制、天然产物生物合成、生物催化 C–C 键构建研究者",
+      "minutes": 10,
+      "labels": [
+        "新酶反应",
+        "无辅因子",
+        "有预印本"
+      ],
+      "verification": "Crossref 记录、DOI、摘要与预印本关系已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "The study identifies the enzyme TunB, which forms an intermolecular carbon–carbon bond from chorismate without any cofactor, participating in biosynthesis of the methanotroph natural product tundrenone, and whose chorismate substrate could not be predicted from sequence.",
+        "why": "Chorismate is an important precursor for many metabolites, yet the known reaction types built on it are limited. A cofactor-free intermolecular C–C bond-forming enzyme widens the biocatalytic toolbox around chorismate and warns that sequence similarity alone misses reactions of this kind.",
+        "evidence": "The abstract confirms that TunB catalyses intermolecular C–C bond formation from chorismate without a cofactor and that sequence analysis failed to predict this substrate; structural and kinetic details of the mechanism rest with the source paper. A ChemRxiv preprint precedes it (10.26434/chemrxiv.15002986/v1).",
+        "audience": "Researchers in enzyme mechanisms, natural product biosynthesis and biocatalytic C–C bond construction",
+        "verification": "Crossref record, DOI, abstract and the preprint relationship verified; correction/retraction status was not independently audited."
+      }
+    },
+    {
+      "id": "kim-2026-coevolution-epistasis",
+      "title": "Enhancing prediction accuracy for enzyme activity engineering through sequence co-evolution and epistatic relationship modeling",
+      "cn": "通过序列共进化与上位性关系建模提高酶活性改造的预测准确率",
+      "authors": "Kim et al.",
+      "journal": "Nucleic Acids Research",
+      "date": "2026-09-07",
+      "topic": "AI 与机器学习辅助酶研究",
+      "type": "original",
+      "doi": "10.1093/nar/gkag879",
+      "url": "https://doi.org/10.1093/nar/gkag879",
+      "featured": true,
+      "summary": "针对 MSA 类模型（如 SCANEER）在组合预测突变时因上位性相互作用频繁失效的问题，该工作将序列共进化和上位性关系显式建模，提升酶活性改造的预测准确率。",
+      "why": "定向进化与计算预测的瓶颈早已不是“找到单点突变”，而是“单点组合后仍然有效”。把上位性从噪声变成可建模的对象，直接关系到组合突变体设计的成功率。",
+      "evidence": "摘要指出：基于 MSA 的模型可成功预测提升活性的单点突变，但组合突变常因残基间上位性相互作用而失败；本文方法通过共进化和上位性建模改善这一缺陷。具体提升幅度与验证酶的数量以原文为准。",
+      "audience": "计算酶工程、定向进化、突变体组合设计研究者",
+      "minutes": 9,
+      "labels": [
+        "上位性建模",
+        "组合突变",
+        "MSA 方法"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Addressing the frequent failure of MSA-based models such as SCANEER when predicting mutations in combination because of epistatic interactions, this work models sequence co-evolution and epistatic relationships explicitly to improve prediction accuracy in enzyme activity engineering.",
+        "why": "The bottleneck in directed evolution and computational prediction is no longer finding single beneficial mutations but combining them without losing the gain. Turning epistasis from noise into a modelled object directly affects the success rate of combinatorial mutant design.",
+        "evidence": "The abstract notes that MSA-based models can predict single mutations that raise activity, but that combinations frequently fail because of epistatic interactions between residues; the method here improves on that by modelling co-evolution and epistasis. The size of the improvement and the number of enzymes tested rest with the source paper.",
+        "audience": "Researchers in computational enzyme engineering, directed evolution and combinatorial mutant design",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      }
+    },
+    {
+      "id": "retnadhas-2026-bmc-multilab",
+      "title": "Multi-lab, multi-enzyme study demonstrates the versatility of bacterial microcompartment shells as a modular platform for confined biocatalysis",
+      "cn": "多实验室、多酶研究证明细菌微区室壳是限域生物催化的模块化平台",
+      "authors": "Retnadhas et al.",
+      "journal": "Metabolic Engineering",
+      "date": "2026-09-01",
+      "topic": "酶的级联组装",
+      "type": "original",
+      "doi": "10.1016/j.ymben.2026.102486",
+      "url": "https://doi.org/10.1016/j.ymben.2026.102486",
+      "featured": true,
+      "summary": "五个实验室用统一的标准化流程，以 SpyCatcher-SpyTag 共价偶联把 12 种脱氢酶装入细菌微区室（BMC）壳，全部保持活性，并实现双酶共封装与辅因子循环。",
+      "why": "多酶组装领域缺少的是“可复制的通用流程”而非单个成功案例。这项研究用多实验室平行验证 + 统一配方证明了 BMC 壳作为模块化组装平台的通用性，封装酶还获得最高约 50 °C 的热稳定性提升和冻干复溶能力。",
+      "evidence": "摘要与原文页确认：16 种候选脱氢酶中 13 种成功表达纯化，12 种高效偶联并全部成功封装；封装后唯一失活的酶其游离形式同样失活；部分封装酶热稳定性提升至约 50 °C，冻干复溶后结构与活性保持；双酶共封装实现辅因子循环。注意所用 HT1 wiffle 壳顶点未封闭，底物进出不受限，结论不可外推至全封闭壳。",
+      "audience": "多酶级联、酶组装与限域催化、合成代谢工程研究者",
+      "minutes": 13,
+      "labels": [
+        "多实验室验证",
+        "SpyCatcher 组装",
+        "体外概念验证"
+      ],
+      "verification": "Crossref 记录、DOI、摘要及 ScienceDirect 原文页（Highlights 与 Conclusion）已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Five laboratories used one standardised protocol to load twelve dehydrogenases into bacterial microcompartment (BMC) shells through covalent SpyCatcher-SpyTag coupling, all of them remaining active, and achieved co-encapsulation of two enzymes plus cofactor recycling.",
+        "why": "What the multi-enzyme assembly field lacks is a reproducible general protocol rather than single success stories. Parallel multi-laboratory validation with one shared formulation demonstrates that BMC shells work as a modular assembly platform; encapsulated enzymes also gained up to roughly 50 °C in thermal stability and survived lyophilisation and re-solubilisation.",
+        "evidence": "The abstract and source page confirm that 13 of 16 candidate dehydrogenases expressed and purified, 12 coupled efficiently and all 12 were successfully encapsulated; the only enzyme inactivated by encapsulation is also inactive in free form; some encapsulated enzymes gained thermal stability up to about 50 °C and retained structure and activity after lyophilisation and re-solubilisation; two enzymes were co-encapsulated to recycle cofactor. Note that the HT1 wiffle shell is not closed at the vertices, so substrate access is unrestricted and the findings cannot be extrapolated to fully closed shells.",
+        "audience": "Researchers in multi-enzyme cascades, enzyme assembly and confined catalysis, and synthetic metabolic engineering",
+        "verification": "Crossref record, DOI, abstract and the ScienceDirect source page (Highlights and Conclusion) verified; correction/retraction status was not independently audited."
+      }
+    },
+    {
+      "id": "stoeckle-2026-cell-enzyme-gas",
+      "title": "Self-Assembled Hybrid Cell-Enzyme Materials for Gas-Powered Biocatalysis",
+      "cn": "用于气体驱动生物催化的自组装细胞-酶杂化材料",
+      "authors": "Stoeckle et al.",
+      "journal": "Advanced Functional Materials",
+      "date": "2026-09-02",
+      "topic": "酶固定化与酶—材料体系",
+      "type": "original",
+      "doi": "10.1002/adfm.78174",
+      "url": "https://doi.org/10.1002/adfm.78174",
+      "featured": true,
+      "summary": "将大肠杆菌天然的甲酸氢解酶机制与可编程酶网络整合进自组装杂化材料：H2 和 CO2 转化为甲酸，作为瞬时电子载体驱动高稳定甲酸脱氢酶再生 NADH，实现气体驱动的生物催化。",
+      "why": "它把“细胞代谢供气”与“酶网络用气”做成材料级集成，为气体底物（H2/CO2）驱动的绿色催化提供了一条不依赖外加电子供体的新路线，是细胞-酶杂化体系方向的代表性演示。",
+      "evidence": "摘要确认体系以大肠杆菌甲酸氢解酶机制把 H2 和 CO2 转为甲酸，再由甲酸脱氢酶完成 NADH 再生，并整合了转氢酶。目前证据处于材料级概念演示，规模化性能与长期运行稳定性以原文为准。",
+      "audience": "酶-材料杂化体系、气体发酵、辅酶再生与生物催化研究者",
+      "minutes": 11,
+      "labels": [
+        "细胞-酶杂化",
+        "气体驱动",
+        "概念演示"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "A self-assembled hybrid material integrates the native Escherichia coli formate hydrogenlyase machinery with a programmable enzyme network: H2 and CO2 are converted into formate, which acts as a transient electron carrier to regenerate NADH through a highly stable formate dehydrogenase, giving gas-powered biocatalysis.",
+        "why": "It integrates gas supply from cell metabolism with gas-consuming enzyme networks at the materials level, offering a route to green catalysis driven by gaseous substrates (H2/CO2) without an added electron donor, and stands as a representative demonstration for cell-enzyme hybrid systems.",
+        "evidence": "The abstract confirms that the system converts H2 and CO2 into formate using the E. coli formate hydrogenlyase mechanism, then regenerates NADH with formate dehydrogenase, with a transhydrogenase also integrated. Current evidence is a materials-level concept demonstration; scale-up performance and long-term operational stability rest with the source paper.",
+        "audience": "Researchers in enzyme-material hybrid systems, gas fermentation, cofactor regeneration and biocatalysis",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      }
+    },
+    {
+      "id": "sollid-2026-ced-ra-complexes",
+      "title": "One mechanism, two diseases: Involvement of enzyme–substrate complexes in the pathogenesis of celiac disease and rheumatoid arthritis",
+      "cn": "一种机制、两种疾病：酶-底物复合物参与乳糜泻与类风湿关节炎的发病",
+      "authors": "Sollid",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "date": "2026-09-04",
+      "topic": "酶的结构与催化机制",
+      "type": "perspective",
+      "doi": "10.1073/pnas.2600933123",
+      "url": "https://doi.org/10.1073/pnas.2600933123",
+      "featured": false,
+      "summary": "乳糜泻与类风湿关节炎共享 HLA II 遗传决定因素、翻译后修饰肽抗体和针对修饰酶自身的自身抗体；文章提出酶-底物复合物（TG2、PAD2/4）参与两种自身免疫病发病的统一机制视角。",
+      "why": "它把两种重大自身免疫病放进同一个酶学框架里讨论，对理解“酶作为自身抗原”的免疫机制有框架性价值，也提示酶-底物复合物本身可能成为干预靶点。",
+      "evidence": "摘要确认两种疾病共有 HLA II 关联、针对脱酰胺/瓜氨酸化肽的抗体以及针对 TG2 与 PAD2/4 的自身抗体；机制模型基于抗原特异性免疫细胞研究的近期进展。属观点性综合，非新实验数据。",
+      "audience": "酶学机制、自身免疫病机理、翻译后修饰研究者",
+      "minutes": 8,
+      "labels": [
+        "机制综述",
+        "自身免疫",
+        "观点性文章"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；体裁按单作者观点性文章处理，更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Celiac disease and rheumatoid arthritis share HLA class II genetic determinants, antibodies against post-translationally modified peptides and autoantibodies against the modifying enzymes themselves; the article proposes enzyme-substrate complexes (TG2, PAD2/4) as a unifying mechanistic view of both autoimmune diseases.",
+        "why": "It places two major autoimmune diseases inside one enzymological framework, which has framework value for understanding immunity against enzymes as self-antigens and suggests that enzyme-substrate complexes themselves may be intervention targets.",
+        "evidence": "The abstract confirms that both diseases share HLA class II associations, antibodies against deamidated or citrullinated peptides, and autoantibodies against TG2 and PAD2/4; the mechanistic model builds on recent progress in antigen-specific immune cell research. This is a perspective synthesis rather than new experimental data.",
+        "audience": "Researchers in enzyme mechanisms, autoimmune disease pathogenesis and post-translational modification",
+        "verification": "Crossref record, DOI and abstract verified; treated as a single-author perspective piece, and correction/retraction status was not independently audited."
+      }
+    },
+    {
+      "id": "rieger-2026-squidly",
+      "title": "Squidly harnesses enzyme functional hierarchy and contrastive learning to efficiently predict catalytic residues from sequence",
+      "cn": "Squidly 利用酶功能层级与对比学习从序列高效预测催化残基",
+      "authors": "Rieger et al.",
+      "journal": "eLife",
+      "date": "2026-09-04",
+      "topic": "AI 与机器学习辅助酶研究",
+      "type": "original",
+      "doi": "10.7554/elife.108186.3",
+      "url": "https://doi.org/10.7554/elife.108186.3",
+      "featured": false,
+      "summary": "Squidly 结合酶功能层级信息与对比学习，仅从序列预测催化残基，目标是在不依赖高质量 3D 结构的前提下超越 BLAST 类方法的注释能力。",
+      "why": "催化残基预测是酶功能注释的关键一步；现有金标准 ML 方法依赖高质量结构，无法大规模应用。纯序列路线若成立，可直接作用于宏基因组级别的海量序列。",
+      "evidence": "摘要指出 BLAST 类方法依赖已注释同源物、ML 金标准依赖高质量 3D 结构两大局限，Squidly 旨在同时绕过两者。该条目为 eLife 修订版本（v3），性能基准与对比结果以原文为准。",
+      "audience": "酶功能注释、序列-功能预测、宏基因组挖掘研究者",
+      "minutes": 8,
+      "labels": [
+        "催化残基预测",
+        "纯序列方法",
+        "修订版本"
+      ],
+      "verification": "Crossref 记录、DOI、版本关系与预印本已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Squidly combines enzyme functional hierarchy information with contrastive learning to predict catalytic residues from sequence alone, aiming to outperform BLAST-style annotation without relying on high-quality 3D structures.",
+        "why": "Catalytic residue prediction is a key step in enzyme function annotation, yet current machine-learning gold standards depend on high-quality structures and cannot be applied at scale. A sequence-only route that works would apply directly to metagenome-scale sequence collections.",
+        "evidence": "The abstract points to two limits — BLAST-based methods depend on already annotated homologues, while machine-learning gold standards depend on high-quality 3D structures — and Squidly is designed to bypass both. This entry is an eLife revised version (v3); performance benchmarks and comparisons rest with the source paper.",
+        "audience": "Researchers in enzyme function annotation, sequence-to-function prediction and metagenomic mining",
+        "verification": "Crossref record, DOI, version relationship and preprint verified; correction/retraction status was not independently audited."
+      }
+    },
+    {
+      "id": "thevelein-2026-cellusec",
+      "title": "Cellulase-secreting yeast can substantially reduce commercial enzyme requirements in lignocellulosic ethanol production",
+      "cn": "分泌纤维素酶的酵母可显著降低木质纤维素乙醇生产中的商品酶用量",
+      "authors": "Thevelein et al.",
+      "journal": "Biotechnology for Biofuels and Bioproducts",
+      "date": "2026-09-03",
+      "topic": "定向进化与理性设计",
+      "type": "original",
+      "doi": "10.1186/s13068-026-02810-1",
+      "url": "https://doi.org/10.1186/s13068-026-02810-1",
+      "featured": false,
+      "summary": "在工业木质纤维素乙醇酿酒酵母中工程化纤维素酶分泌能力（Cellusec 菌株），并在真实原料的同步糖化发酵（SSF）中验证，目标直指商品纤维素酶制剂这一 2G 乙醇的主要成本项。",
+      "why": "纤维素酶成本是二代乙醇产业化的老瓶颈；把分泌能力直接做进工业生产菌株而不是实验室菌株，是走向可放大的关键区别。",
+      "evidence": "摘要确认：向工业 2G 菌株整合单拷贝 CBHI、CBHII、EG 与三拷贝 BGL 基因，并在真实原料 SSF 实验中展示降低商品酶用量的潜力。具体降幅与发酵终点指标以原文为准。",
+      "audience": "工业生物技术、木质纤维素转化、酵母工程研究者",
+      "minutes": 9,
+      "labels": [
+        "工业菌株",
+        "纤维素酶分泌",
+        "真实原料验证"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "Cellulase secretion was engineered into an industrial lignocellulosic-ethanol Saccharomyces cerevisiae strain (Cellusec), and validated in simultaneous saccharification and fermentation (SSF) on real feedstock, targeting the commercial cellulase preparation that dominates the cost of 2G ethanol.",
+        "why": "The cost of cellulases has long been the bottleneck in second-generation ethanol, and engineering secretion into an industrial production strain rather than a laboratory strain is the key difference on the path to scale.",
+        "evidence": "The abstract confirms integration of single-copy CBHI, CBHII and EG together with three copies of BGL into an industrial 2G strain, and shows the potential to lower commercial enzyme loading in SSF experiments on real feedstock. Exact reductions and fermentation end-point metrics rest with the source paper.",
+        "audience": "Researchers in industrial biotechnology, lignocellulose conversion and yeast engineering",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      }
+    },
+    {
+      "id": "gao-2026-dl-enzyme-review",
+      "title": "Deep Learning in Enzyme Function Prediction and Novel Enzyme Discovery",
+      "cn": "深度学习在酶功能预测与新酶发现中的应用（综述）",
+      "authors": "Gao et al.",
+      "journal": "ACS Synthetic Biology",
+      "date": "2026-09-04",
+      "topic": "AI 与机器学习辅助酶研究",
+      "type": "review",
+      "doi": "10.1021/acssynbio.6c00633",
+      "url": "https://doi.org/10.1021/acssynbio.6c00633",
+      "featured": false,
+      "summary": "综述深度学习在 EC/GO 注释、底物特异性、催化残基识别、动力学参数、热稳定性、pH 最适值与新酶挖掘等任务上的进展，特点是以基准设计而非单纯报告分数来比较方法。",
+      "why": "这个领域方法井喷但基准混乱，一篇认真讨论输入模态、训练数据和数据划分策略的综述，比又一个“新模型”更能帮读者判断哪些结论站得住。",
+      "evidence": "摘要确认综述覆盖七类预测任务，并按输入模态、训练数据、划分策略比较代表性方法；强调基准设计而非分数本身。具体方法清单与结论以原文为准。",
+      "audience": "AI 酶学方法使用者与评估者、新酶挖掘研究者",
+      "minutes": 12,
+      "labels": [
+        "方法综述",
+        "基准设计",
+        "入门地图"
+      ],
+      "verification": "Crossref 记录、DOI 与摘要已核验；更正/撤稿状态未独立审计。",
+      "en": {
+        "summary": "A review of deep learning across EC/GO annotation, substrate specificity, catalytic residue identification, kinetic parameters, thermostability, pH optima and novel enzyme mining, notable for comparing methods through benchmark design rather than simply reporting scores.",
+        "why": "Methods in this field are exploding while benchmarks are messy; a review that seriously discusses input modalities, training data and data-splitting strategies helps readers judge which conclusions hold, more than yet another new model would.",
+        "evidence": "The abstract confirms coverage of seven prediction tasks and compares representative methods by input modality, training data and splitting strategy, emphasising benchmark design over scores themselves. The full method list and conclusions rest with the source paper.",
+        "audience": "Users and evaluators of AI methods in enzymology, and researchers mining novel enzymes",
+        "verification": "Crossref record, DOI and abstract verified; correction/retraction status was not independently audited."
+      }
+    }
+  ],
+  "edition": 2,
+  "observationsEn": [
+    [
+      "Focus of this edition",
+      "AI-assisted enzyme design is moving from after-the-fact scoring to embedding the objective itself: CatESO puts substrate-aware Kcat prediction inside sequence generation, while the NAR work folds epistatic interactions into combinatorial mutation prediction. Two routes answered in the same week."
+    ],
+    [
+      "Evidence boundary",
+      "The bacterial microcompartment (BMC) encapsulation platform is currently an in vitro proof of concept: the HT1 wiffle shell is not closed at the vertices, the effect of encapsulation on activity and kinetics varies from enzyme to enzyme and cannot be generalised into \"encapsulation always improves performance\"; the gas-powered cell-enzyme hybrid material is likewise still a materials-level demonstration."
+    ],
+    [
+      "Section coverage",
+      "The \"enzyme cascade assembly\" section that was empty last edition is filled this week by a five-laboratory collaboration on BMCs; \"fusion enzymes and multifunctional enzymes\" still has no new paper strong enough to be selected, so the classic reading path carries it rather than padding with weakly related work."
+    ]
+  ]
+}

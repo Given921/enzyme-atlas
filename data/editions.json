@@ -1,7 +1,20 @@
 {
-  "updatedAt": "2026-09-07",
-  "current": 2,
+  "updatedAt": "2026-09-14",
+  "current": 3,
   "editions": [
+    {
+      "edition": 3,
+      "updatedAt": "2026-09-14",
+      "periodStart": "2026-09-07",
+      "periodEnd": "2026-09-14",
+      "itemCount": 7,
+      "featuredCount": 5,
+      "headline": "MutexaGPT：把酶工程直觉翻译成物理建模设计的多智能体平台",
+      "en": {
+        "headline": "MutexaGPT: an intuition-to-design translator for physics-based enzyme engineering"
+      },
+      "path": "data/papers.json"
+    },
     {
       "edition": 2,
       "updatedAt": "2026-09-07",
@@ -13,7 +26,7 @@
       "en": {
         "headline": "CatESO: Differentiable Enzyme Sequence Optimization Guided by Substrate-Aware Kcat Prediction"
       },
-      "path": "data/papers.json"
+      "path": "data/history/papers-2026-09-07.json"
     },
     {
       "edition": 1,
