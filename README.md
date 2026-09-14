@@ -3,7 +3,7 @@
 **面向所有酶研究者的每周文献推荐平台。** 每周一整理值得优先阅读的新论文，并维护按研究问题组织的经典文献库；不做个人相关性排序，也不试图替代通用文献搜索引擎。
 
 <!-- ea-address:start -->
-> 公开地址尚未配置。站点不内置任何绝对地址，可部署到任意域名或子目录；运行 `python scripts/set_site_address.py --url https://<中性地址>/` 后，本行会自动替换为公开入口。
+[进入公开网站](https://enzyme-atlas.github.io/enzyme-atlas/) · [浏览经典论文](https://enzyme-atlas.github.io/enzyme-atlas/classics.html) · [查看筛选标准](https://enzyme-atlas.github.io/enzyme-atlas/#method)
 <!-- ea-address:end -->
 
 | 📖 读者 | 🧰 开发者 | 🤖 Agent |

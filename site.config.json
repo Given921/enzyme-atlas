@@ -1,6 +1,6 @@
 {
-  "siteUrl": "",
-  "canonicalHost": "",
+  "siteUrl": "https://enzyme-atlas.github.io/enzyme-atlas/",
+  "canonicalHost": "enzyme-atlas.github.io",
   "siteName": "Enzyme Atlas",
   "publisher": "",
   "contactEmail": "hello@enzyme-atlas.org",
@@ -9,6 +9,6 @@
     "denyTokens": [],
     "localPolicy": "scripts/disclosure.local.json"
   },
-  "updatedAt": "",
+  "updatedAt": "2026-09-14",
   "managedBy": "scripts/set_site_address.py"
 }
