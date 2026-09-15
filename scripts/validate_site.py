@@ -154,13 +154,13 @@ search = (ROOT / "search.js").read_text(encoding="utf-8")
 classics_js = (ROOT / "classics.js").read_text(encoding="utf-8")
 archive_html = (ROOT / "archive.html").read_text(encoding="utf-8")
 archive_js = (ROOT / "archive.js").read_text(encoding="utf-8")
-for required in ("observationGrid", "subscriptionTopics", "每周一更新", "editionSummary", "intent-strip", "本期全部收录", "editionGrid", "archive.html", "data-lang-slot"):
+for required in ("observationGrid", "每周一更新", "editionSummary", "intent-strip", "本期全部收录", "editionGrid", "archive.html", "data-lang-slot"):
     assert required in index, f"missing {required}"
 for prohibited in ("每日更新", "每日推送", "每周文献雷达", "编辑筛选后发布", "了解筛选方法", "48篇", "第 01 期"):
     assert prohibited not in index, f"homepage contains prohibited copy: {prohibited}"
 for prohibited in ("setFilter(", "classicBtn", "weeklyCount", "第 01 期"):
     assert prohibited not in app, f"stale runtime reference: {prohibited}"
-for required in ("exportSaved", "quick-grid", "fetch('data/papers.json')", "function move(id, kind)", "subscriptionTopics", "renderEdition", "renderEditions", "fetch('data/editions.json')", "EA.pick(item, 'summary')", "T('act_hide')"):
+for required in ("exportSaved", "quick-grid", "fetch('data/papers.json')", "function move(id, kind)", "renderEdition", "renderEditions", "fetch('data/editions.json')", "EA.pick(item, 'summary')", "T('act_hide')"):
     assert required in app, f"missing interaction: {required}"
 assert "fetch('data/papers.json')" in search and "record.url" in search, "search is not using the shared real-DOI data"
 assert "EA.v('topics'" in search and "EA.paperTitle" in search, "search is not bilingual"

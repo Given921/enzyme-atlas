@@ -23,7 +23,7 @@
     <a class="brand" href="#home" aria-label="Enzyme Atlas 首页" data-i18n-aria="brand_aria"><span class="brand-mark" aria-hidden="true">EA</span><span>Enzyme Atlas</span></a>
     <form class="site-search" id="globalSearch" action="search.html" role="search"><span class="search-icon" aria-hidden="true">⌕</span><input id="globalSearchInput" name="q" type="search" placeholder="搜索酶、EC 号、反应、底物、DOI 或作者" aria-label="全站文献搜索" data-i18n-placeholder="search_placeholder" data-i18n-aria="search_aria"><button type="submit" data-i18n="search_button">搜索</button></form>
     <nav class="main-nav" aria-label="主导航" data-i18n-aria="nav_aria"><a href="#latest" class="active" data-i18n="nav_home">本周精选</a><a href="#all-papers" data-i18n="nav_all">全部收录</a><a href="#past-editions" data-i18n="nav_editions">往期精选</a><a href="classics.html" data-i18n="nav_classics">经典论文</a><a href="topics.html" data-i18n="nav_topics">研究专题</a><a href="#method" data-i18n="nav_method">筛选标准</a></nav>
-    <div class="header-actions"><button class="icon-button" id="openSaved" title="打开阅读清单" aria-label="打开阅读清单" data-i18n-title="reading_list" data-i18n-aria="reading_list">⌑<span id="savedBadge">0</span></button><button class="subscribe-button" id="subscribeBtn"><span data-i18n="subscribe">订阅周报</span> <span>→</span></button><span class="lang-slot" data-lang-slot></span></div>
+    <div class="header-actions"><button class="icon-button" id="openSaved" title="打开阅读清单" aria-label="打开阅读清单" data-i18n-title="reading_list" data-i18n-aria="reading_list">⌑<span id="savedBadge">0</span></button><span class="lang-slot" data-lang-slot></span></div>
   </header>
 
   <main id="home">
@@ -77,7 +77,6 @@
   </footer>
 
   <dialog id="paperDialog"><button class="dialog-close" onclick="paperDialog.close()" aria-label="关闭" data-i18n-aria="dialog_close">×</button><div id="dialogContent"></div></dialog>
-  <dialog id="subscribeDialog"><button class="dialog-close" onclick="subscribeDialog.close()" aria-label="关闭" data-i18n-aria="dialog_close">×</button><div class="modal-copy"><p class="eyebrow" data-i18n="subscribe_eyebrow">WEEKLY BRIEFING</p><h2 data-i18n="subscribe_title">订阅酶学文献周报</h2><p data-i18n="subscribe_desc">每周一封。订阅专题仅影响你收到的周报，不改变网站的公共推荐排序。</p><label><span data-i18n="subscribe_label">邮箱地址</span><input id="emailInput" type="email" placeholder="name@lab.edu"></label><div class="subscription-topics" id="subscriptionTopics"></div><button class="primary-button" id="confirmSubscribe"><span data-i18n="subscribe_confirm">保存订阅 →</span></button><p class="form-note" id="subscribeNote"></p></div></dialog>
   <dialog id="savedDialog"><button class="dialog-close" onclick="savedDialog.close()" aria-label="关闭" data-i18n-aria="dialog_close">×</button><div class="modal-copy"><p class="eyebrow" data-i18n="saved_eyebrow">YOUR READING LIST</p><h2 data-i18n="saved_title">我的阅读清单</h2><div id="savedList"></div></div></dialog>
   <script src="app.js"></script>
 </body>

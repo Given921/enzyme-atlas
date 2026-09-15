@@ -3,10 +3,9 @@ let editionObservations = [];
 let currentEdition = null;
 let editionManifest = null;
 const paperDialog = document.getElementById('paperDialog');
-const subscribeDialog = document.getElementById('subscribeDialog');
 const savedDialog = document.getElementById('savedDialog');
 const storageKey = 'enzyme-atlas-reading-state';
-const state = { saved: [], later: [], read: [], hidden: [], subscriptions: [], ...JSON.parse(localStorage.getItem(storageKey) || '{}') };
+const state = { saved: [], later: [], read: [], hidden: [], ...JSON.parse(localStorage.getItem(storageKey) || '{}') };
 const unique = values => [...new Set(values)];
 const paper = id => papers.find(item => item.id === id);
 const isActive = (id, kind) => state[kind].includes(id);
@@ -15,7 +14,7 @@ const typeLabel = type => EA.typeLabel(type);
 const editionLabel = num => String(num).padStart(2, '0');
 
 function persist() {
-  ['saved', 'later', 'read', 'hidden', 'subscriptions'].forEach(key => state[key] = unique(state[key] || []));
+  ['saved', 'later', 'read', 'hidden'].forEach(key => state[key] = unique(state[key] || []));
   localStorage.setItem(storageKey, JSON.stringify(state));
   document.getElementById('savedBadge').textContent = state.saved.length + state.later.length;
 }
@@ -123,11 +122,6 @@ function readingSection(label, key) {
 
 function renderSaved() { document.getElementById('savedList').innerHTML = `<button class="export-button" onclick="exportSaved()">${T('export_bibtex')}</button>${readingSection(T('sec_saved'), 'saved')}${readingSection(T('sec_later'), 'later')}${readingSection(T('sec_read'), 'read')}${readingSection(T('sec_hidden'), 'hidden')}`; }
 
-function renderSubscriptionTopics() {
-  const topics = unique(papers.map(item => item.topic));
-  document.getElementById('subscriptionTopics').innerHTML = topics.map(topic => `<label class="topic-check"><input type="checkbox" value="${topic}" ${state.subscriptions.includes(topic) ? 'checked' : ''}> ${EA.v('topics', topic)}</label>`).join('');
-}
-
 function renderAll() { renderFeatured(); renderObservations(); renderPapers(); renderSaved(); persist(); }
 
 async function init() {
@@ -147,25 +141,16 @@ async function init() {
     document.getElementById('resultCount').textContent = T('data_error');
     return;
   }
-  renderSubscriptionTopics();
   renderAll();
   renderEditions();
 }
 
-document.getElementById('subscribeBtn').onclick = () => { renderSubscriptionTopics(); subscribeDialog.showModal(); };
-document.getElementById('confirmSubscribe').onclick = () => {
-  const email = document.getElementById('emailInput');
-  state.subscriptions = [...document.querySelectorAll('#subscriptionTopics input:checked')].map(input => input.value);
-  persist();
-  document.getElementById('subscribeNote').textContent = email.checkValidity() ? T('subscribe_ok') : T('subscribe_bad_email');
-};
 document.getElementById('openSaved').onclick = () => { renderSaved(); savedDialog.showModal(); };
 
 EA.onChange(() => {
   renderEdition();
   renderAll();
   renderEditions();
-  renderSubscriptionTopics();
 });
 
 init();
