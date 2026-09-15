@@ -291,6 +291,7 @@ dialog::backdrop { background: rgba(0,0,0,.7); }
 .search-row h2 a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .search-row p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.6; }
 .search-row > span { color: var(--muted); font-size: 10px; font-weight: 700; text-align: right; }
+.search-scope { display: inline-block; margin: 8px 0 0 8px; padding: 2px 7px; border: 1px solid var(--line); border-radius: 10px; color: #4d4d4d; font-size: 9px; font-weight: 600; font-style: normal; }
 
 .classic-rule { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 26px; }
 .classic-rule span { padding: 6px 9px; border: 1px solid var(--line); border-radius: 14px; color: var(--muted); font-size: 9px; font-weight: 700; }

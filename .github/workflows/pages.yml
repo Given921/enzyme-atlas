@@ -37,6 +37,7 @@ jobs:
           node --check classics.js
           node --check archive.js
           node scripts/test_classics_ui.js
+          node scripts/test_search_pool.js
 
   deploy:
     environment:

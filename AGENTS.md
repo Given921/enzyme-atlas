@@ -59,6 +59,7 @@ node --check search.js
 node --check classics.js
 node --check archive.js
 node scripts/test_classics_ui.js
+node scripts/test_search_pool.js
 ```
 
 After a successful deployment, run `scripts/verify_public_site.py --from-config` against the address recorded in `site.config.json`. The script must confirm the homepage, classics page, archive page, i18n runtime, weekly data, edition manifest, exact checked-out classic count, requested edition, and English coverage of both data sets.

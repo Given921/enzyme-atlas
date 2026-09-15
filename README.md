@@ -34,7 +34,7 @@ index.html / app.js          每周推荐、全部收录与往期精选栏目
 classics.html / classics.js  经典论文库
 archive.html / archive.js    往期期号归档（含单期详情）
 topics.html                  通用研究专题
-search.html / search.js      已知论文查找（中英文双语检索）
+search.html / search.js      全站已知论文查找：当期 + 往期 + 经典库（中英文双语检索）
 i18n.js                      中英文运行时：语言切换、静态文案与受控词表
 data/papers.json             当前周刊数据（含 edition 期号与英文内容）
 data/editions.json           期号清单：每期的日期、篇数、标题与数据路径
@@ -62,6 +62,7 @@ node --check search.js
 node --check classics.js
 node --check archive.js
 node scripts/test_classics_ui.js
+node scripts/test_search_pool.js
 ```
 
 联网 DOI 核验：
